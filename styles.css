@@ -381,8 +381,8 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
-    padding: 2rem;
     background-color: var(--snow-100);
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -412,9 +412,13 @@ p {
 }
 
 .note {
-    font-family: 'Forum', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;        /* 16px */
     color: var(--polar-300);
+}
+
+.bold {
+    font-weight: 700;
 }
 
 a {
@@ -433,14 +437,14 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;          /* 48px */
     background-color: transparent;
+    padding: 3rem;
 }
 
 .site-title {
     font-family: 'Josefin Sans', sans-serif;
     color: var(--polar-200);
-    font-size: 2.5rem;     /* 40px */
+    font-size: 3rem;     /* 48px */
     font-weight: 100;
     margin: 0;
 }
@@ -461,4 +465,75 @@ a:hover {
 
 .nav-links a:hover {
     color: var(--mountain-300);
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-dark {
+    background-color: var(--polar-400);
+    color: var(--snow-100);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark p {
+    color: var(--snow-100);
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.5rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 0 0 25%;
+}
+
+.footer-left h4 {
+    margin-bottom: 1rem;
+    color: var(--polar-200);
+}
+
+.footer-section .note {
+    margin-bottom: 0.5rem;
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-right {
+        flex: 1;
+    }
 }
