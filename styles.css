@@ -1,3 +1,29 @@
+:root {
+    /* Polar Night - Dark theme colors */
+    --polar-100: #2e3440;
+    --polar-200: #3b4252;
+    --polar-300: #434c5e;
+    --polar-400: #4c566a;
+
+    /* Snow Storm - Light theme colors */
+    --snow-100: #d8dee9;
+    --snow-200: #e5e9f0;
+    --snow-300: #eceff4;
+
+    /* Frost - Blue accent colors */
+    --frost-sage: #8fbcbb;
+    --frost-sky: #88c0d0;
+    --frost-ocean: #81a1c1;
+    --frost-deep: #5e81ac;
+
+    /* Aurora - Accent colors */
+    --aurora-red: #bf616a;
+    --aurora-orange: #d08770;
+    --aurora-yellow: #ebcb8b;
+    --aurora-green: #a3be8c;
+    --aurora-purple: #b48ead;
+}
+
 * {
     margin: 0;
     padding: 0;
