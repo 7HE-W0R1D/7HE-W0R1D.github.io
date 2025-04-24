@@ -429,11 +429,11 @@ a {
     box-shadow: inset 0 0 0 0 var(--mountain-200);
     margin: 0 -.25rem;
     padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: color .6s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 a:hover {
-    box-shadow: inset 100px 0 0 0 var(--mountain-200);
+    box-shadow: inset 300px 0 0 0 var(--mountain-200);
     color: var(--snow-300);
 }
 
