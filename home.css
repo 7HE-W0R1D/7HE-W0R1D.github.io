@@ -100,7 +100,6 @@
     display: flex;
     gap: 1.5rem;
     padding: 0.5rem;
-    justify-content: center;
 }
 
 .square-image {
