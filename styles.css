@@ -386,14 +386,16 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 100;
+    font-style: normal;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.2;  
 }
 
-h1 { font-size: 4rem; }     /* 64px */
-h2 { font-size: 2.5rem; }   /* 40px */
+h1 { font-size: 5rem; }     /* 64px */
+h2 { font-size: 4rem; }   /* 40px */
 h3 { font-size: 2.25rem; }  /* 36px */
 h4 { font-size: 1.5rem; }   /* 24px */
 
@@ -413,7 +415,7 @@ p {
 
 .note {
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;        /* 16px */
+    font-size: 0.85rem;        /* 16px */
     color: var(--polar-300);
 }
 
@@ -484,7 +486,7 @@ a:hover {
 }
 
 .section-content {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     width: 100%;
 }
@@ -532,6 +534,22 @@ a:hover {
 
 .footer-section .note {
     margin-bottom: 0.5rem;
+}
+
+button {
+    background-color: var(--snow-100);
+    color: var(--polar-400);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: var(--snow-200);
 }
 
 /* Media query for mobile responsiveness */
