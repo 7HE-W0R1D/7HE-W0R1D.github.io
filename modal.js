@@ -17,24 +17,28 @@ document.addEventListener('DOMContentLoaded', function() {
         img.addEventListener('click', function() {
             modal.style.display = "block";
             modalImg.src = this.src;
+            modalImg.style.cursor = 'zoom-out';
         });
     });
 
-    // Close modal when clicking close button or outside the image
-    closeBtn.onclick = function() {
+    // Close modal when clicking close button, modal image, or outside
+    function closeModal() {
         modal.style.display = "none";
+        modalImg.style.cursor = 'default';
     }
 
+    closeBtn.onclick = closeModal;
+    modalImg.onclick = closeModal;
     modal.onclick = function(e) {
         if (e.target === modal) {
-            modal.style.display = "none";
+            closeModal();
         }
     }
 
     // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.style.display === "block") {
-            modal.style.display = "none";
+            closeModal();
         }
     });
 });
