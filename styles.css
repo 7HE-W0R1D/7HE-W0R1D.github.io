@@ -27,6 +27,9 @@
     --mountain-100: #AF967D;
     --mountain-200: #7d6464;
     --mountain-300: #7D4b4b;
+
+    --off-black: #2e3440;
+    --off-white: #eceff4;
 }
 
 * {
@@ -398,25 +401,25 @@ h1 { font-size: 5rem; }     /* 64px */
 h2 { font-size: 4rem; }   /* 40px */
 h3 { font-size: 2.25rem; }  /* 36px */
 h4 { font-size: 1.5rem; }   /* 24px */
-
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;     /* 20px */
     margin-bottom: 1rem;
+    /* color: var(--off-black); */
 }
 
 .subtitle {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 1rem;        /* 16px */
-    color: var(--polar-300);
+    color: var(--off-black);
     margin-bottom: 1rem;
 }
 
 .note {
     font-family: 'Poppins', sans-serif;
     font-size: 0.85rem;        /* 16px */
-    color: var(--polar-300);
+    color: var(--off-black);
 }
 
 .bold {
@@ -485,23 +488,49 @@ section {
     padding: 3rem;
 }
 
+section h2 {
+    margin-bottom: 3rem;
+}
+
 .section-content {
-    /* max-width: 1200px; */
+    max-width: 1600px;
     margin: 0 auto;
     width: 100%;
 }
 
-.section-dark {
+.section-dark-100 {
+    background-color: var(--polar-100);
+    color: var(--snow-100);
+}
+
+.section-dark-200 {
+    background-color: var(--polar-200);
+    color: var(--snow-100);
+}
+
+.section-dark-300 {
+    background-color: var(--polar-300);
+    color: var(--snow-100);
+}
+
+.section-dark-400 {
     background-color: var(--polar-400);
     color: var(--snow-100);
 }
 
-.section-dark h1,
-.section-dark h2,
-.section-dark h3,
-.section-dark h4,
-.section-dark p {
-    color: var(--snow-100);
+.section-light-100 {
+    background-color: var(--snow-100);
+    color: var(--polar-400);
+}
+
+.section-light-200 {
+    background-color: var(--snow-200);
+    color: var(--polar-400);
+}
+
+.section-light-300 {
+    background-color: var(--snow-300);
+    color: var(--polar-400);
 }
 
 .footer-section {
@@ -535,7 +564,6 @@ section {
 .footer-section .note {
     margin-bottom: 0.5rem;
 }
-
 button {
     background-color: var(--snow-100);
     color: var(--polar-400);
@@ -550,6 +578,15 @@ button {
 
 button:hover {
     background-color: var(--snow-200);
+}
+
+button.dark-400 {
+    background-color: var(--polar-400);
+    color: var(--snow-100);
+}
+
+button.dark-400:hover {
+    background-color: var(--polar-300);
 }
 
 /* Media query for mobile responsiveness */

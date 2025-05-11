@@ -140,7 +140,7 @@
 .project-card {
     display: flex;
     min-height: 600px;
-    background-color: var(--polar-400);
+    /* background-color: var(--polar-400); */
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -165,13 +165,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--snow-100);
-    background-color: var(--polar-400);
+    /* color: var(--snow-100);
+    background-color: var(--polar-400); */
 }
 
 .project-info h2 {
     margin-bottom: 1rem;
-    color: var(--snow-100);
+    /* color: var(--snow-100); */
 }
 
 .project-info p {
