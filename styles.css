@@ -494,7 +494,7 @@ section h2 {
 }
 
 .section-content {
-    max-width: 1600px;
+    max-width: min(1280px, calc(100vw - 6rem));
     margin: 0 auto;
     width: 100%;
 }
