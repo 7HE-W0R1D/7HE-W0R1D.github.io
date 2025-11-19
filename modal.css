@@ -10,18 +10,50 @@
     backdrop-filter: blur(5px);
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 1200px;
-    max-height: 90vh;
-    object-fit: contain;
-    position: relative;
+/* center the figure inside the modal */
+.modal-figure {
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    max-width: 1200px;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    max-height: 90vh;
 }
 
+/* image styling - responsive and contained */
+.modal-content {
+    margin: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(90vh - 3.5rem);
+    object-fit: contain;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* caption below image */
+.modal-caption {
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+/* keep close button visible above everything */
 .modal-close {
     position: absolute;
     top: 2rem;
