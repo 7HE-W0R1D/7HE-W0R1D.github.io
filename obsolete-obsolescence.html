@@ -20,10 +20,16 @@
     <nav class="navbar">
         <h3 class="site-title">Borui Wang</h3>
         <ul class="nav-links">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html#works">My Works</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="/index.html#home">Home</a></li>
+            <li class="projects" aria-haspopup="true" aria-expanded="false">
+                <a href="/index.html#works" aria-haspopup="true" aria-expanded="false">My Works ▾</a>
+                <ul class="projects-dropdown" role="menu" aria-label="All projects">
+                    <li><a role="menuitem" href="u-compass.html">U Compass</a></li>
+                    <li><a role="menuitem" href="obsolete-obsolescence.html">Obsolete Obsolescence</a></li>
+                </ul>
+            </li>
+            <li><a href="/static/resume/Borui Wang Resume Simplified.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="/index.html#about">About Me</a></li>
         </ul>
     </nav>
 
