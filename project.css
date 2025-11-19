@@ -104,6 +104,8 @@
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     display: block;
     overflow: hidden;
     border-radius: 12px;
