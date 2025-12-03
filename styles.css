@@ -438,7 +438,7 @@ a {
 }
 
 a:hover {
-    box-shadow: inset 300px 0 0 0 var(--mountain-200);
+    box-shadow: inset width 0 0 0 var(--mountain-200);
     color: var(--snow-300);
 }
 
