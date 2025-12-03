@@ -590,6 +590,52 @@ button.dark-400:hover {
     background-color: var(--polar-300);
 }
 
+/* Article title: plain text matching surrounding style */
+.pub-title {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: var(--polar-200);
+    text-decoration: none;
+}
+
+/* Author name (Borui Wang) in publications: same style as pub-title */
+.publication-list .author-name {
+    font-weight: 600;
+    color: var(--polar-200);
+}
+
+/* DOI link for publications: with underline animation on hover */
+.pub-doi {
+    font-family: inherit;
+    font-size: .85rem;
+    color: var(--mountain-200);
+    text-decoration: none;
+    margin-left: 0.08rem;
+    position: relative;
+    padding: 0 .12rem;
+    transition: color .22s ease;
+}
+
+.pub-doi::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background: var(--mountain-200);
+    transition: width .22s ease;
+}
+
+.pub-doi:hover {
+    color: var(--polar-400);
+}
+
+.pub-doi:hover::after {
+    width: 100%;
+}
+
 /* Media query for mobile responsiveness */
 @media screen and (max-width: 768px) {
     .footer-content {
