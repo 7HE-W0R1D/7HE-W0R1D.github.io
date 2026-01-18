@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Instructions for AI Generation
+
+Prompt for AI: "Use the following HTML structure to generate a new project page. You must adhere to the class names and hierarchy to maintain CSS compatibility. 
+Reuse as much of the existing structure as possible. Adapt the content to fit the new project, ensuring all sections are relevant. You can add, change, or remove sections as needed.
+
+Replace all content inside [BRACKETS] with specific details." 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js"></script>
+    <title>[PROJECT TITLE] | Borui Wang</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h3 class="site-title">Borui Wang</h3>
+        <ul class="nav-links">
+            <li><a href="/index.html#home">Home</a></li>
+            <li class="projects" aria-haspopup="true" aria-expanded="false">
+                <a href="/index.html#works" aria-haspopup="true" aria-expanded="false">My Works ▾</a>
+                <ul class="projects-dropdown" role="menu" aria-label="All projects">
+                    <li><a role="menuitem" href="u-compass.html">U Compass</a></li>
+                    <li><a role="menuitem" href="obsolete-obsolescence.html">Obsolete Obsolescence</a></li>
+                    <li><a role="menuitem" href="retroconnect.html">RetroConnect</a></li>
+                    <li><a role="menuitem" href="icontour.html">iContour</a></li>
+                    <li><a href="https://sites.google.com/view/care-just-a-click-away/home" target="_blank" rel="noopener noreferrer">UW Medicine</a></li>
+                    <li><a href="static/okapi/okapi.pdf" target="_blank" rel="noopener noreferrer">OKAPI Reusables Redesign</a></li>
+                </ul>
+            </li>
+            <li><a href="/index.html#publications">Publications</a></li>
+            <li><a href="/static/resume/Borui Wang Resume Simplified.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="/index.html#about">About Me</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>[PROJECT TITLE]</h1>
+        <p class="note">[SHORT TAGLINE OR SUBTITLE]</p>
+        </header>
+
+    <section>
+        <div class="video-wrapper">
+            <iframe width="100%" height="100%" 
+                src="[INSERT YOUTUBE EMBED LINK]"
+                title="[VIDEO TITLE]" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Always keep this as light-200  -->
+    <section class="section-light-200">
+        <div class="intro-content section-content">
+            <div class="intro-left">
+                <h2>Introduction</h2>
+                <div class="intro-text">
+                    <p>[PARAGRAPH 1: Hook the reader. Describe the inspiration and high-level concept.]</p>
+                    
+                    <p>[PARAGRAPH 2: Summarize the impact or function of the project.]</p>
+                    
+                    <div class="keywords">
+                        <span>Keywords: </span>
+                        <strong>[KEYWORD 1]</strong>,
+                        <strong>[KEYWORD 2]</strong>,
+                        <strong>[KEYWORD 3]</strong>
+                    </div>
+                    
+                    </div>
+            </div>
+            <div class="intro-image">
+                <img src="[PATH_TO_HERO_IMAGE]" alt="[ALT TEXT]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Always keep this as light-200  -->
+    <section class="section-light-200">
+        <div class="container section-content">
+            <h2>Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Context</h3>
+                    <p>[CONTEXT DESCRIPTION] <a href="[LINK]" target="_blank" rel="noopener noreferrer">[COURSE/LAB NAME]</a></p>
+                </div>
+                <div class="overview-item">
+                    <h3>Time Frame</h3>
+                    <p>[MONTH YEAR] — [MONTH YEAR] ([DURATION])</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Project Type</h3>
+                    <p>[e.g., Individual Project, Team Research, Hackathon]</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Platform / Tech</h3>
+                    <p>[e.g., Arduino, Python, Web, Physical Computing]</p>
+                </div>
+                <!-- Add, remove the above entry as needed -->
+                </div>
+        </div>
+    </section>
+
+    <!-- 
+    Main section to reuse, can also change section-dark-200 to the following:
+    section-dark-100
+    section-dark-200
+    section-dark-300 
+    section-dark-400
+    section-light-100 
+    section-light-200 
+    section-light-300  
+    
+    Important note: only change between light and dark between large sections, if content between sections are closely related, do not change, can only change shade(100, 200, 300, 400)
+    Also, do not change between light and dark more than twice for the whole page. 
+    -->
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>[Section header]</h2>
+
+            <!-- Use the components below as needed -->
+            <h3>[Subheader if needed]</h3>
+
+            <p>[PARAGRAPH]</p>
+
+            <!-- List -->
+            <ul class="feature-list">
+                <li><strong>[List]:</strong> [Description of bullet point]</li>
+                <li><strong>[List]:</strong> [Description of bullet point]</li>
+                <li><strong>[List]:</strong> [Description of bullet point]</li>
+            </ul>
+
+            <!-- Small images collage -->
+            <div class="description-images">
+                <img src="[IMG_PATH_A]" alt="[ALT_A]" class="zoomable">
+                <img src="[IMG_PATH_B]" alt="[ALT_B]" class="zoomable">
+                <img src="[IMG_PATH_C]" alt="[ALT_C]" class="zoomable">
+            </div>
+
+            <!-- Full-width image -->
+            <img src="[IMG_PATH_FULL]" alt="[ALT_FULL]" class="zoomable full-width-image">
+
+            </div>
+    </section>
+
+
+    <!-- If no publications, skip this section -->
+    <section class="description-section section-light-200">
+        <div class="container section-content">
+            <h2>Publications & Recognition</h2>
+            
+            <div class="publication-item">
+                <h3>[PAPER TITLE]</h3>
+                <p>[AUTHOR LIST]</p>
+                <p><a href="[DOI_URL]" target="_blank">[DOI_TEXT]</a></p>
+                <p>[CONFERENCE / JOURNAL NAME]</p>
+            </div>
+            
+            </div>
+    </section>
+
+    <!-- If have important links like project site or GitHub links, use this section -->
+    <section class="description-section section-dark-300">
+        <div class="container section-content">
+            <h2>[Source Code / Want to Know More?]</h2>
+
+            <p>[Closing sentence inviting the user to explore further.]</p>
+
+            <button onclick="window.open('[LINK_URL]')">
+                [BUTTON TEXT, e.g., View on GitHub →]
+            </button>
+
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-left">
+            <h3>Borui Wang</h3>
+            <a href="mailto:bw559@cornell.edu">bw559@cornell.edu</a>
+            <p style="font-size: 0.75rem;">Designed by Borui · Created with AI</p>
+        </div>
+        <div class="footer-right">
+            <p class="note bold">Architectural Robotics Lab</p>
+            <p class="note">Room 212</p>
+            <p class="note">Cornell University, 37 Forest Home Dr</p>
+            <p class="note">Ithaca, NY 14850</p>
+        </div>
+    </footer>
+
+</body>
+</html>
