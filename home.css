@@ -63,6 +63,23 @@
     margin-bottom: 1rem;
 }
 
+.hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.hashtag {
+    background-color: var(--snow-200);
+    color: var(--polar-400);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 .description, .current {
     margin-bottom: 1.5rem;
     line-height: 1.6;
