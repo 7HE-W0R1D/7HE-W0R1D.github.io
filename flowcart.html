@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js"></script>
+    <title>FlowCart | Borui Wang</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h3 class="site-title">Borui Wang</h3>
+        <ul class="nav-links">
+            <li><a href="/index.html#home">Home</a></li>
+            <li class="projects" aria-haspopup="true" aria-expanded="false">
+                <a href="/index.html#works" aria-haspopup="true" aria-expanded="false">My Works ▾</a>
+                <ul class="projects-dropdown" role="menu" aria-label="All projects">
+                    <li><a role="menuitem" href="flowcart.html">FlowCart</a></li>
+                    <li><a role="menuitem" href="u-compass.html">U Compass</a></li>
+                    <li><a role="menuitem" href="obsolete-obsolescence.html">Obsolete Obsolescence</a></li>
+                    <li><a role="menuitem" href="retroconnect.html">RetroConnect</a></li>
+                    <li><a role="menuitem" href="icontour.html">iContour</a></li>
+                    <li><a href="https://sites.google.com/view/care-just-a-click-away/home" target="_blank" rel="noopener noreferrer">UW Medicine</a></li>
+                    <li><a href="static/okapi/okapi.pdf" target="_blank" rel="noopener noreferrer">OKAPI Reusables Redesign</a></li>
+                </ul>
+            </li>
+            <li><a href="/index.html#publications">Publications</a></li>
+            <li><a href="https://drive.google.com/open?id=1p47w6TPD_0jlRlg6bKsRyRCpphHy60HE&usp=drive_fs" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="/index.html#about">About Me</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>FlowCart</h1>
+        <p class="note">Robot Housekeeper Cart: Empowering Housekeeping Work through Etiquette-Based Interactions in Hotels</p>
+    </header>
+
+    <!-- Always keep this as light-200  -->
+    <section class="section-light-200">
+        <div class="intro-content section-content">
+            <div class="intro-left">
+                <h2>Introduction</h2>
+                <div class="intro-text">
+                    <p>Housekeeper carts are essential in hotel operations but often create friction for both workers and guests. Our observational study revealed that conventional carts are heavy, difficult to maneuver, and prone to causing strain on housekeeping staff. They also occupy highly visible public spaces, becoming part of the guest experience.</p>
+                    
+                    <p>This project reimagines carts not just as functional tools, but as interactive agents capable of participating in the social texture of hotels. We designed a modular cart and robot laundry module that uses non-verbal etiquette behaviors—like proactive greetings and anticipating needs—to communicate politely with bystanders.</p>
+                    
+                    <div class="keywords">
+                        <span>Keywords: </span>
+                        <strong>Human-Robot-Interaction</strong>,
+                        <strong>Hotel Robot</strong>,
+                        <strong>Non-verbal Interactions</strong>,
+                        <strong>Physical Prototyping</strong>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="static/flowcart/Frame 1.png" alt="FlowCart Concept Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Always keep this as light-200  -->
+    <section class="section-light-200">
+        <div class="container section-content">
+            <h2>Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Context</h3>
+                    <p>Published in <a href="https://dl.acm.org/doi/10.1145/3776734.3794607" target="_blank" rel="noopener noreferrer">HRI Companion '26</a></p>
+                </div>
+                <div class="overview-item">
+                    <h3>Time Frame</h3>
+                    <p>Mar 2025 — Mar 2026 (1 Year)</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Project Type</h3>
+                    <p>Academic Research</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Platform / Tech</h3>
+                    <p>Physical Computing, Robotics, ODrive, Raspberry Pi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-100">
+        <div class="container section-content">
+            <h2>Market Analysis</h2>
+            <h3>Operational Pressure & Customer Discovery</h3>
+            <p>During our customer discovery at the Statler Hotel, we found that labor represents approximately 35-40% of operating costs, making it the hotel’s largest expense (about $44 per occupied room). Staffing shortages are common, and the physical toll of housekeeping leads to frequent shoulder and back injuries. The hospitality industry needs a solution that maintains productivity with fewer staff and reduces repetitive physical strain.</p>
+
+            <ul class="feature-list">
+                <li><strong>Heavy Workload:</strong> Housekeepers clean about 14 rooms per day.</li>
+                <li><strong>Safety Risks:</strong> Physical demands result in both injury and retention risks.</li>
+                <li><strong>Global Opportunity:</strong> Housekeeping is a $190 billion market globally.</li>
+            </ul>
+
+            <img src="static/flowcart/Nomu Hotel Robot Pitch Video Slides (1).png" alt="Market Analysis" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-light-100">
+        <div class="container section-content">
+            <h2>Business Model</h2>
+            <h3>Robot-as-a-Service (RaaS)</h3>
+            <p>Nomu FlowCart operates under a Robot-as-a-Service (RaaS) model with a $2,000 upfront setup fee and a $350 monthly subscription per robot. This allows hotels to adopt the system with minimal upfront investment while generating recurring revenue for Nomu.</p>
+
+            <ul class="feature-list">
+                <li><strong>Scalability:</strong> By spreading capital costs, hotels can readily expand their robot fleet based on seasonal needs.</li>
+                <li><strong>Financial Projections:</strong> We estimate 700 robots deployed by Year 5, generating approximately $5.6 million in annual recurring revenue.</li>
+                <li><strong>Break-even:</strong> Expected at around 450 deployed robots.</li>
+            </ul>
+
+            <img src="static/flowcart/Nomu Hotel Robot Pitch Video Slides (3).png" alt="Business Model" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>Research & Observational Study</h2>
+            <h3>The Hidden Strain in Housekeeping</h3>
+            <p>Through shadowing housekeepers, we discovered that conventional carts are bulky and incredibly heavy. Staff often have to back up and lean their entire body weight on the carts just to push them forward. These heavy carts also frequently damage hotel walls in narrow hallways. Based on these observations, we envisioned a modular cart system where components like a laundry module can operate independently, reducing the physical strain on workers.</p>
+            
+            <img src="static/flowcart/Nomu Hotel Robot Pitch Video Slides (6).png" alt="FlowCart Observational Insight" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-dark-300">
+        <div class="container section-content">
+            <h2>Interaction Design</h2>
+            <h3>Etiquette-Based Non-verbal Behaviors</h3>
+            <p>Hotels are sensitive environments where unwanted sounds and lights are discouraged. Therefore, we grounded the robot's interactions in non-verbal etiquette designed around the physical movement of the laundry module and its lid:</p>
+            
+            <ul class="feature-list">
+                <li><strong>Proactive Greetings:</strong> The robot uses subtle lid movements to signal acknowledgment, simulating a friendly but non-intrusive greeting to guests.</li>
+                <li><strong>Clear Communication:</strong> By explicitly modulating speed and using motion cues, the cart makes its yielding intentions clear when passing someone.</li>
+                <li><strong>Showing Gratitude:</strong> The bot closes interactions or ends hand-offs with a soft, distinct lid movement pattern signifying "Goodbye."</li>
+            </ul>
+
+            <img src="static/flowcart/Nomu Hotel Robot Pitch Video Slides (5).png" alt="FlowCart Etiquette Interactions" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-light-100">
+        <div class="container section-content">
+            <h2>Prototyping & Field Testing</h2>
+            <h3>Building a Functional Laundry Robot</h3>
+            <p>We built our functional prototype using the WOWLIVE 100L Rolling Laundry Hamper. By adopting a hoverboard-ODrive conversion methodology, we repurposed hoverboard motors with an ODrive controller and a Raspberry Pi. We then conducted a multi-phase Wizard of Oz (WoZ) study both in a controlled studio environment and in natural public corridors.</p>
+
+            <ul class="feature-list">
+                <li><strong>Polite Perception:</strong> Pedestrians consistently perceived the robot's yielding actions as polite.</li>
+                <li><strong>Refining Actions:</strong> We learned that backing up communicated yielding intentions far better than just stopping, leading to iterative speed control refinements.</li>
+            </ul>
+
+            <img src="static/flowcart/Nomu Hotel Robot Pitch Video Slides (4).png" alt="FlowCart Prototype Output" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-light-200">
+        <div class="container section-content">
+            <h2>Publications & Recognition</h2>
+            
+            <div class="publication-item">
+                <h3>Robot Housekeeper Cart: Empowering Housekeeping Work through Etiquette-Based Interactions in Hotels</h3>
+                <p>Nanyi Jiang, Borui Wang, and Xiaozhen Liu.</p>
+                <p><a href="https://doi.org/10.1145/3776734.3794607" target="_blank">doi:10.1145/3776734.3794607</a></p>
+                <p>HRI Companion '26: Companion Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction</p>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+    <footer class="footer-section">
+        <div class="footer-left">
+            <h3>Borui Wang</h3>
+            <a href="mailto:bw559@cornell.edu">bw559@cornell.edu</a>
+            <p style="font-size: 0.75rem;">Designed by Borui · Created with AI</p>
+        </div>
+        <div class="footer-right">
+            <p class="note bold">Architectural Robotics Lab</p>
+            <p class="note">Room 212</p>
+            <p class="note">Cornell University, 37 Forest Home Dr</p>
+            <p class="note">Ithaca, NY 14850</p>
+        </div>
+    </footer>
+
+</body>
+</html>
