@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js"></script>
+    <title>Windborne | Borui Wang</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h3 class="site-title">Borui Wang</h3>
+        <ul class="nav-links">
+            <li><a href="/index.html#home">Home</a></li>
+            <li class="projects" aria-haspopup="true" aria-expanded="false">
+                <a href="/index.html#works" aria-haspopup="true" aria-expanded="false">My Works ▾</a>
+                <ul class="projects-dropdown" role="menu" aria-label="All projects">
+                    <li><a role="menuitem" href="windborne.html">Windborne</a></li>
+                    <li><a role="menuitem" href="flowcart.html">FlowCart</a></li>
+                    <li><a role="menuitem" href="u-compass.html">U Compass</a></li>
+                    <li><a role="menuitem" href="obsolete-obsolescence.html">Obsolete Obsolescence</a></li>
+                    <li><a role="menuitem" href="retroconnect.html">RetroConnect</a></li>
+                    <li><a role="menuitem" href="icontour.html">iContour</a></li>
+                    <li><a href="https://sites.google.com/view/care-just-a-click-away/home" target="_blank" rel="noopener noreferrer">UW Medicine</a></li>
+                    <li><a href="static/okapi/okapi.pdf" target="_blank" rel="noopener noreferrer">OKAPI Reusables Redesign</a></li>
+                </ul>
+            </li>
+            <li><a href="/index.html#publications">Publications</a></li>
+            <li><a href="https://drive.google.com/open?id=1p47w6TPD_0jlRlg6bKsRyRCpphHy60HE&usp=drive_fs" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="/index.html#about">About Me</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>Windborne</h1>
+        <p class="note">Fostering Nature Connection and Playfulness through Multimodal Interaction in Healthcare Settings</p>
+    </header>
+
+    <section>
+        <video controls preload="metadata" poster="static/windborne/Windborne video poster.jpg" class="full-width-image" style="margin: 0;">
+            <source src="static/windborne/Dandelion ICMI Demo Camer Ready.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Always keep this as light-200  -->
+    <section class="section-light-200">
+        <div class="intro-content section-content">
+            <div class="intro-left">
+                <h2>Introduction</h2>
+                <div class="intro-text">
+                    <p>Hospital inpatients and visitors often experience a profound sense of stress and disconnection. Confined to waiting areas and wards, they lose the restorative effects of a gentle breeze, sunlight, and living plants, while medical routines leave them in passive roles of waiting or receiving treatment.</p>
+
+                    <p>Windborne is a free-standing, gesture-based installation that translates the invisible wind into interactive experiences of light and bubbles. Inspired by the dispersal of dandelion seeds, it responds to a wave of the hand, or simply to someone walking by, with drifting bubbles and shimmering light.</p>
+
+                    <p>Wind can only be seen through what it moves. Our mood board gathers these traces, from windsocks and kites to rippled sand and falling leaves. The dandelion became our central metaphor: its seed head shaped the light panel, and its scattering seeds shaped how bubbles drift away from your hand.</p>
+
+                    <div class="keywords">
+                        <span>Keywords: </span>
+                        <strong>Multimodal Interaction</strong>,
+                        <strong>Caring Design</strong>,
+                        <strong>Playfulness</strong>,
+                        <strong>Bubbles</strong>
+                    </div>
+                        <button onclick="window.open('static/windborne/ICMI Demo.pdf', '_blank')" class="pdf-button">
+                            Read the Paper →
+                        </button>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="static/windborne/Masonry Wind Collection 4.jpg" alt="Mood board of wind phenomena, from dandelions and windsocks to kites and sand dunes">
+            </div>
+        </div>
+    </section>
+
+    <!-- Always keep this as light-200  -->
+    <section class="section-light-200">
+        <div class="container section-content">
+            <h2>Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Context</h3>
+                    <p>Demo published in <a href="https://dl.acm.org/doi/10.1145/3776574.3832531" target="_blank" rel="noopener noreferrer">ICMI '26</a></p>
+                </div>
+                <div class="overview-item">
+                    <h3>Team</h3>
+                    <p>Borui Wang &amp; Prof. Keith Evan Green, Architectural Robotics Lab</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Project Type</h3>
+                    <p>Academic Research</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Platform / Tech</h3>
+                    <p>Arduino, Gesture &amp; Ultrasonic Sensing, Addressable LEDs, Laser Cutting, 3D Printing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-100">
+        <div class="container section-content">
+            <h2>Caring Design</h2>
+            <h3>From “Fixing” to “Caring”</h3>
+            <p>We ground Windborne in a caring design perspective, which shifts the design paradigm in healthcare settings from “fixing” the human body to “caring” for patients’ subjective and relational experiences. Drawing on Joan Tronto’s feminist ethics of care, we see the installation not as an intervention to cure medical conditions, but as a poetic medium that attends to fragile relationships and emotional well-being.</p>
+
+            <ul class="feature-list">
+                <li><strong>Nature Connection:</strong> Brings the feeling of a gentle breeze into clinical spaces cut off from the outdoors.</li>
+                <li><strong>Open-ended Play:</strong> Balances ambiguity and feedback to invite light-hearted moments rather than goal-driven tasks.</li>
+                <li><strong>Inclusive Interaction:</strong> Where prior works like Witaya Junma’s <em>Into the Wind</em> pair breath with bubble blowing, Windborne uses gentle hand gestures and passive presence, so people with physical limitations or attached medical equipment can take part.</li>
+            </ul>
+
+            <img src="static/windborne/hospital_kids_warp.png" alt="Composite concept of Windborne in action beside a hospital bed" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>System Implementation</h2>
+            <h3>Four Modules, One Dandelion</h3>
+            <p>Windborne is a free-standing, human-scale installation: an edge-lit acrylic “seed head” on a hollow PVC stem, divided into four modules.</p>
+
+            <ul class="feature-list">
+                <li><strong>Sensing:</strong> A Grove PAJ7620U2 gesture sensor at the center of the top panel registers active hand motions, while two Grove ultrasonic rangers in the base track the presence and walking direction of passersby.</li>
+                <li><strong>Visualization:</strong> A transparent acrylic disk is edge-lit by a 144 LEDs/m WS2812B strip, with semi-transparent laser engravings acting as light-guide pixels. We extended Sonya Vasquez’s open-source light guide plate algorithm with a polar mapper that turns square spline density matrices into circular patterns, producing three panel designs: <em>Dot</em>, <em>Dash</em>, and <em>Patch</em>.</li>
+                <li><strong>Ephemeral Medium:</strong> A Bambu Lab electric bubble blaster sits in a 3D-printed housing, panned by an MG90 servo. A non-toxic homemade solution of dish soap, xanthan gum, corn syrup, and water produces slow-drifting bubbles that outlast store-bought ones.</li>
+                <li><strong>Control &amp; Structure:</strong> An Arduino UNO with a Grove shield coordinates the sensors, servo, and a MOSFET that drives the bubble blaster. A dedicated 5V 15A supply powers the LEDs and blaster, kept separate from the logic power to isolate noise. The hollow PVC stem carries all cabling and is just compliant enough that the servo’s torque makes the top panel sway.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-300">
+        <div class="container section-content">
+            <h2>Multimodal Interaction</h2>
+            <h3>Three Ways to Play with the Wind</h3>
+            <p>To accommodate varying energy levels, physical abilities (e.g., children in wheelchairs or with attached IV lines), and comfort levels, Windborne offers three interaction scenarios with minimal physical requirements:</p>
+
+            <ul class="feature-list">
+                <li><strong>Lateral Hand Waves:</strong> A slow left-to-right or right-to-left wave triggers a matching light pattern while the servo pans the bubble blaster, releasing bubbles along the path of the hand like dandelion seeds carried off by a breeze. The blaster’s torque sets the stem gently swaying.</li>
+                <li><strong>Vertical Hand Waves:</strong> An upward sweep summons a sudden gust. Blinking “starlight” pixels ignite at the base of the disk, sweep up both sides, converge at the top, and shrink away, while the blaster releases an extended vertical stream of bubbles.</li>
+                <li><strong>Passive Engagement:</strong> For people too tired or shy to interact, the installation senses passersby and leaves a soft starlight trail that follows their direction, with a brief swirl of bubbles drifting into their wake.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>Preliminary Feedback</h2>
+            <h3>Online Survey &amp; In-person Sessions</h3>
+            <p>We gathered feedback in two stages: an online survey (n = 30) after participants watched a video of the installation, and three in-person feedback sessions.</p>
+
+            <ul class="feature-list">
+                <li><strong>Ratings:</strong> Visual appeal 4.1/5, curiosity provocation 3.6/5, and potential as a conversation starter 3.8/5.</li>
+                <li><strong>Preference:</strong> Over 50% of participants preferred Windborne to traditional passive nature videos.</li>
+                <li><strong>Perceived Benefits:</strong> 21 participants highlighted potential mood improvement, and 14 identified distraction as a key benefit.</li>
+                <li><strong>In Person:</strong> Participants described feeling “happy,” “peaceful,” “calm,” and “relaxed,” and said the interaction evoked “playful childhood” memories.</li>
+            </ul>
+
+            <img src="static/windborne/vsVideo.png" alt="Preference of Windborne vs. nature video across four dimensions" class="zoomable full-width-image">
+
+            <p>On an adapted RoSAS scale, participants rated Windborne highest as interactive, responsive, immersive, and nature-inspired, and low on negative traits such as scary, dangerous, and aggressive.</p>
+
+            <img src="static/windborne/RoSAS.png" alt="RoSAS adapted evaluation of Windborne" class="zoomable full-width-image">
+        </div>
+    </section>
+
+    <section class="description-section section-light-100">
+        <div class="container section-content">
+            <h2>Safe &amp; Responsible Innovation</h2>
+            <h3>Designed for Clinical Spaces</h3>
+
+            <ul class="feature-list">
+                <li><strong>Privacy:</strong> Windborne relies only on local, non-camera sensors, so no personally identifiable biometric data is captured or stored.</li>
+                <li><strong>Physical Safety:</strong> A non-toxic bubble solution, a tip-resistant design, and an enclosed base that shields exposed screws and circuitry.</li>
+                <li><strong>Accessibility:</strong> Low-effort interaction modes accommodate users of diverse motor and cognitive abilities.</li>
+                <li><strong>Maintenance:</strong> Deployment requires regular upkeep to prevent slipping hazards from bubble residue.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="description-section section-light-200">
+        <div class="container section-content">
+            <h2>Publications & Recognition</h2>
+
+            <div class="publication-item">
+                <h3>Windborne: Fostering Nature Connection and Playfulness through Multimodal Interaction in Healthcare Settings</h3>
+                <p>Borui Wang and Keith Evan Green.</p>
+                <p><a href="https://doi.org/10.1145/3776574.3832531" target="_blank">doi:10.1145/3776574.3832531</a></p>
+                <p>ICMI '26: International Conference on Multimodal Interaction, Napoli, Italy (Demo)</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer-section">
+        <div class="footer-left">
+            <h3>Borui Wang</h3>
+            <a href="mailto:bw559@cornell.edu">bw559@cornell.edu</a>
+            <p style="font-size: 0.75rem;">Designed by Borui · Created with AI</p>
+        </div>
+        <div class="footer-right">
+            <p class="note bold">Architectural Robotics Lab</p>
+            <p class="note">Room 212</p>
+            <p class="note">Cornell University, 37 Forest Home Dr</p>
+            <p class="note">Ithaca, NY 14850</p>
+        </div>
+    </footer>
+
+</body>
+</html>

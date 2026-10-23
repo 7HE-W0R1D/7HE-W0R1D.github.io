@@ -138,6 +138,32 @@
     margin-bottom: 5rem;
 }
 
+.news-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.news-list li {
+    display: flex;
+    gap: 2rem;
+    align-items: baseline;
+}
+
+.news-date {
+    flex: 0 0 5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--mountain-200);
+    white-space: nowrap;
+}
+
+.news-list .note {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
 .portfolio-section {
     margin-bottom: 5rem;
 }
@@ -246,5 +272,10 @@
 
     .project-info {
         padding: 2rem;
+    }
+
+    .news-list li {
+        flex-direction: column;
+        gap: 0.25rem;
     }
 }
