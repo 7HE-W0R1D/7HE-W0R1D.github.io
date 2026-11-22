@@ -1,35 +1,35 @@
 :root {
     /* Polar Night - Dark theme colors */
-    --polar-100: #2e3440;
-    --polar-200: #3b4252;
-    --polar-300: #434c5e;
-    --polar-400: #4c566a;
+    --polar-100: #27302d;
+    --polar-200: #313b37;
+    --polar-300: #3c4742;
+    --polar-400: #47534e;
 
     /* Snow Storm - Light theme colors */
-    --snow-100: #d8dee9;
-    --snow-200: #e5e9f0;
-    --snow-300: #eceff4;
+    --snow-100: #f2f8f5;
+    --snow-200: #e2efe8;
+    --snow-300: #fafcfb;
 
-    /* Frost - Blue accent colors */
-    --frost-sage: #8fbcbb;
-    --frost-sky: #88c0d0;
-    --frost-ocean: #81a1c1;
-    --frost-deep: #5e81ac;
+    /* Frost - accent colors (shifted to greens, Nov 2026) */
+    --frost-sage: #86c4bf;
+    --frost-sky: #9fd3bc;
+    --frost-ocean: #6aad91;
+    --frost-deep: #3a8467;
 
     /* Aurora - Accent colors */
-    --aurora-red: #bf616a;
-    --aurora-orange: #d08770;
-    --aurora-yellow: #ebcb8b;
-    --aurora-green: #a3be8c;
-    --aurora-purple: #b48ead;
+    --aurora-red: #d4606b;
+    --aurora-orange: #e48a6a;
+    --aurora-yellow: #f2cd7e;
+    --aurora-green: #a2cc86;
+    --aurora-purple: #b98abd;
 
     /* Red Mountain Brown colors */
-    --mountain-100: #AF967D;
-    --mountain-200: #7d6464;
-    --mountain-300: #7D4b4b;
+    --mountain-100: #bb9878;
+    --mountain-200: #8c5f5a;
+    --mountain-300: #8a4545;
 
-    --off-black: #2e3440;
-    --off-white: #eceff4;
+    --off-black: #27302d;
+    --off-white: #fafcfb;
 }
 
 * {
@@ -646,4 +646,100 @@ button.dark-400:hover {
     .footer-right {
         flex: 1;
     }
+}
+
+/* ==========================================================
+   Small details: motion + cards (Nov 2026)
+   ========================================================== */
+:root {
+    --ease-out: cubic-bezier(.2, .7, .2, 1);
+    --card-shadow: 0 1px 2px rgba(41, 48, 44, .06), 0 8px 24px -12px rgba(41, 48, 44, .25);
+    --card-shadow-hover: 0 2px 4px rgba(41, 48, 44, .08), 0 22px 40px -18px rgba(41, 48, 44, .4);
+}
+
+html { scroll-behavior: smooth; }
+
+::selection { background: var(--aurora-yellow); color: var(--polar-100); }
+
+/* Buttons: small lift + arrow nudge */
+button {
+    transition: background-color .3s ease, transform .3s var(--ease-out), box-shadow .3s var(--ease-out);
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -12px rgba(41, 48, 44, .55);
+}
+button:active { transform: translateY(0); }
+
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--frost-deep);
+    outline-offset: 3px;
+}
+
+/* Entrance + scroll reveal */
+@keyframes fade-up {
+    from { opacity: 0; translate: 0 18px; }
+    to   { opacity: 1; translate: 0 0; }
+}
+
+@keyframes pulse-dot {
+    0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--aurora-green) 70%, transparent); }
+    70%  { box-shadow: 0 0 0 8px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@supports (animation-timeline: view()) {
+    .reveal,
+    .project-card,
+    .making-card,
+    .decision,
+    .stat,
+    .reflection-grid > div,
+    .case-figure,
+    .figure-row figure,
+    .full-width-image {
+        animation: fade-up linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 35%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation: none !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* Link styled as a button (for navigation) */
+a.btn {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--snow-100);
+    color: var(--polar-400);
+    box-shadow: none;
+    transition: background-color .3s ease, box-shadow .3s var(--ease-out);
+}
+a.btn.dark-400 { background-color: var(--polar-400); color: var(--snow-100); }
+a.btn:hover { box-shadow: 0 10px 20px -12px rgba(41, 48, 44, .55); color: var(--snow-100); }
+a.btn.dark-400:hover { background-color: var(--polar-300); }
+
+/* ==========================================================
+   One background per page (Nov 2026): every section sits on the
+   body colour; old dark/light section classes only set text colour.
+   ========================================================== */
+.section-dark,
+.section-dark-100, .section-dark-200, .section-dark-300, .section-dark-400,
+.section-light-100, .section-light-200, .section-light-300 {
+    background-color: transparent;
+    color: var(--polar-400);
+}
+body > section + section {
+    border-top: 1px solid rgba(41, 48, 44, .1);
 }

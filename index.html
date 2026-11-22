@@ -31,10 +31,9 @@
                     <li><a href="index.html#making">More making</a></li>
                 </ul>
             </li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="index.html#publications">Publications</a></li>
             <li><a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -52,9 +51,6 @@
                     </div>
                 </div>
                 <aside class="home-aside" aria-label="At a glance">
-                    <p class="availability">Open to UX research, creative technologist &amp; design engineering
-                        internships · Summer 2027 onward</p>
-
                     <div class="intro-text">
                         <div class="education compact">
                             <p class="degree">PhD, Information Science (Architectural Robotics Lab) · Cornell University · expected 2028</p>
@@ -80,32 +76,37 @@
                     </div>
                 </aside>
             </div>
-            <div class="home-part-c">
-                <div class="image-scroll" role="region" aria-label="Photos from the workbench" tabindex="0">
-                    <div class="image-row">
-                        <div class="square-image">
-                            <img src="static/home/web/windborne-ring-lit.webp" loading="lazy"
-                                alt="Windborne's engraved acrylic ring glowing blue on a workbench during testing">
-                        </div>
-                        <div class="square-image">
-                            <img src="static/home/web/windborne-parts-layout.webp" loading="lazy"
-                                alt="Laser-cut parts and electronics for Windborne laid out before assembly">
-                        </div>
-                        <div class="square-image">
-                            <img src="static/home/web/flowcart-odrive-wiring.webp" loading="lazy"
-                                alt="ODrive motor controller being wired for the FlowCart robot">
-                        </div>
-                        <div class="square-image">
-                            <img src="static/home/web/flowcart-electronics.webp" loading="lazy"
-                                alt="FlowCart's battery, Raspberry Pi and motor controller mounted on the cart frame">
-                        </div>
-                        <div class="square-image">
-                            <img src="static/home/web/u-compass-prototype.webp" loading="lazy"
-                                alt="A laser-engraved wooden compass box with a spoon-shaped pointer, an early tangible prototype">
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <section id="news" class="section-light-300">
+        <div class="section-content">
+            <div class="works-header">
+                <h2>News</h2>
             </div>
+            <p class="availability">Open to UX research, creative technologist &amp; design engineering
+                internships · Summer 2027 onward</p>
+
+            <!-- News list: copy one <li> block to add a new entry (newest first). -->
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">Nov 2026</span>
+                    <p class="note">🎉 <b>"Robots With Nothing to Do: Designing and Evaluating
+                        Non-Instrumental Robots"</b> has been accepted at <b>HRI 2027</b>!</p>
+                </li>
+                <li>
+                    <span class="news-date">Nov 2026</span>
+                    <p class="note">🏆 My solo project <b>Meanwhile</b> won 3rd place in the Health track and Best
+                        Design overall at the Keytos Hackathon 2026.</p>
+                </li>
+                <li>
+                    <span class="news-date">Oct 2026</span>
+                    <p class="note">🎉 Our demo paper <a class="pub-doi" href="windborne.html">Windborne</a> was
+                        presented at <b>ICMI '26</b> in Napoli, Italy. <a class="pub-doi"
+                            href="https://doi.org/10.1145/3776574.3832531" target="_blank"
+                            rel="noopener noreferrer">Read the paper</a></p>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -113,8 +114,6 @@
         <div class="section-content">
             <div class="works-header">
                 <h2>Selected Work</h2>
-                <p>Four projects I'd most like to talk about. Each one walks through the problem, who I learned from,
-                    the calls I made, and what I'd do differently next time.</p>
             </div>
 
             <div class="project-grid">
@@ -133,7 +132,7 @@
                             <li><span class="label">Methods</span>Speculative design, rapid prototyping, survey (n=30), in-person sessions</li>
                             <li><span class="label">Outcome</span>Demo at ICMI '26 · 21 of 30 participants reported a mood lift</li>
                         </ul>
-                        <button class="dark-400" onclick="location.href='windborne.html'">Read the case study →</button>
+                        <a class="btn dark-400 card-link" href="windborne.html">Read the case study →</a>
                     </div>
                 </div>
 
@@ -147,7 +146,7 @@
                             <li><span class="label">Methods</span>Shadowing &amp; interviews at a 150-room hotel, Wizard-of-Oz testing</li>
                             <li><span class="label">Outcome</span>Working robot · HRI '26 Companion paper</li>
                         </ul>
-                        <button class="dark-400" onclick="location.href='flowcart.html'">Read the case study →</button>
+                        <a class="btn dark-400 card-link" href="flowcart.html">Read the case study →</a>
                     </div>
                     <div class="project-image">
                         <img src="static/home/web/cover-flowcart.webp" loading="lazy"
@@ -169,7 +168,7 @@
                             <li><span class="label">Methods</span>Weekly sessions with 5 clinicians for 2 semesters, iterative redesign</li>
                             <li><span class="label">Outcome</span>Pilot with 9 residents at 5 institutions · CHI EA, DIS, IJROBP</li>
                         </ul>
-                        <button class="dark-400" onclick="location.href='icontour.html'">Read the case study →</button>
+                        <a class="btn dark-400 card-link" href="icontour.html">Read the case study →</a>
                     </div>
                 </div>
 
@@ -183,7 +182,7 @@
                             <li><span class="label">Methods</span>Field study, 6 think-aloud tests, affinity mapping, 2 prototype rounds</li>
                             <li><span class="label">Outcome</span>Plain-language search &amp; location page template in Figma</li>
                         </ul>
-                        <button class="dark-400" onclick="location.href='uw-medicine.html'">Read the case study →</button>
+                        <a class="btn dark-400 card-link" href="uw-medicine.html">Read the case study →</a>
                     </div>
                     <div class="project-image">
                         <img src="static/home/web/cover-uwmedicine.webp" loading="lazy"
@@ -242,92 +241,6 @@
         </div>
     </section>
     </main>
-
-    <section id="about" class="section-light-200">
-        <div class="section-content">
-            <div class="works-header">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>When I graduated from kindergarten, everyone wrote their dream job in the class album. Teacher,
-                        scientist, astronaut. I didn't have a word for mine so I made one up: <em>"Play-man"</em>, a
-                        person whose job is just to play. Honestly, I'm a bit surprised how close I've ended up.</p>
-
-                    <p>Most afternoons after school I was in my dad's electronics lab, wiring LEDs to switches and
-                        sticking fans into plastic boxes just to see what would happen. In 7th grade I spent a whole
-                        weekend getting an Arduino to print ten characters, <em>"Loading..."</em>, and I thought that
-                        was a great use of a weekend. I still do this. If the standard way is too easy, I'll happily
-                        spend three times the effort doing it my own way.</p>
-
-                    <p>That's how I ended up in Human Centered Design &amp; Engineering at UW, and then in Information
-                        Science at Cornell, a department that lets you wander around instead of sticking to one track.
-                        My research asks what machines would be like if they were allowed to play, and what kind of
-                        relationships people build with robots that are curious, idle, or just busy with their own
-                        thing.</p>
-
-                    <p><strong>How I work.</strong> I usually start from a feeling (wind lifting a dandelion, a heavy
-                        cart in a hotel hallway) and sketch interactions around it. Then I prototype fast, in pixels and
-                        in hardware, put it in front of people, watch what they actually do, and go again.</p>
-
-                    <p>As a TA, students often tell me my explanations are easy to follow, mostly because I teach with
-                        lots of examples. Outside the lab I run a home server for my own AI, cloud drive and library,
-                        keep old iPods and phones alive, and fix my 2015 Volvo V60 myself. I usually end up spending
-                        more on tools than the repair would've cost.</p>
-                </div>
-                <div class="about-photos">
-                    <figure class="about-portrait">
-                        <img src="static/home/web/portrait.webp" loading="lazy"
-                            alt="Portrait of Borui, smiling, in front of an old wall with peeling wallpaper">
-                    </figure>
-                    <figure>
-                        <img src="static/home/web/about-volvo-brakes.webp" loading="lazy"
-                            alt="A white Volvo V60 on a jack with a wheel off and tools laid out for a brake job">
-                        <figcaption>Brake job on my Volvo</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="static/home/web/about-ipod-teardown.webp" loading="lazy"
-                            alt="An iPod Classic opened up with its logic board and battery exposed">
-                        <figcaption>Reviving an iPod Classic</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="static/home/web/about-homelab.webp" loading="lazy"
-                            alt="A wall-mounted dashboard screen beside a desk monitor showing my home server status">
-                        <figcaption>Home server dashboard</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="static/home/web/about-laptop-repair.webp" loading="lazy"
-                            alt="Close-up of a laptop motherboard during repair of a burnt power socket">
-                        <figcaption>Fixing a friend's burnt laptop socket</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="news" class="section-light-300">
-        <div class="section-content">
-            <div class="works-header">
-                <h2>News</h2>
-            </div>
-
-            <!-- News list: copy one <li> block to add a new entry (newest first). -->
-            <ul class="news-list">
-                <li>
-                    <span class="news-date">Nov 2026</span>
-                    <p class="note">🏆 My solo project <b>Meanwhile</b> won 3rd place in the Health track and Best
-                        Design overall at the Keytos Hackathon 2026.</p>
-                </li>
-                <li>
-                    <span class="news-date">Oct 2026</span>
-                    <p class="note">🎉 Our demo paper <a class="pub-doi" href="windborne.html">Windborne</a> was
-                        presented at <b>ICMI '26</b> in Napoli, Italy. <a class="pub-doi"
-                            href="https://doi.org/10.1145/3776574.3832531" target="_blank"
-                            rel="noopener noreferrer">Read the paper</a></p>
-                </li>
-            </ul>
-        </div>
-    </section>
 
     <section id="publications" class="section-light-200">
         <div class="section-content">

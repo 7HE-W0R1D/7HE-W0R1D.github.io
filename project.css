@@ -83,7 +83,7 @@
     justify-content: center;
     margin-top: 3rem;
     padding: 1rem 2rem;
-    background-color: #646977;
+    background-color: var(--polar-400);
     color: white;
     border: none;
     border-radius: 100px;
@@ -94,7 +94,7 @@
 }
 
 .pdf-button:hover {
-    background-color: #4e5461;
+    background-color: var(--polar-300);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -472,3 +472,96 @@
     .section-content { max-width: calc(100vw - 2rem); }
     .stat strong { font-size: 2.4rem; }
 }
+
+/* ==========================================================
+   Small details: cards + motion (Nov 2026)
+   ========================================================== */
+
+/* Header entrance */
+.project-header h1,
+.project-header .project-title {
+    animation: fade-up .9s var(--ease-out) both;
+}
+
+/* Key decisions: numbered, with the left rule (no card) */
+.decision-list { counter-reset: decision; }
+.decision { counter-increment: decision; padding-top: .5rem; padding-bottom: .5rem; }
+.decision h3::before {
+    content: counter(decision, decimal-leading-zero);
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    margin-bottom: .35rem;
+    color: var(--aurora-yellow);
+}
+.section-light-100 .decision h3::before,
+.section-light-200 .decision h3::before,
+.section-light-300 .decision h3::before { color: var(--mountain-200); }
+
+/* Stats: top rule, big number (no card) */
+.stat {
+    border-top: 2px solid color-mix(in srgb, currentColor 25%, transparent);
+    padding-top: 1rem;
+}
+.stat strong { color: var(--frost-deep); }
+.section-dark-100 .stat strong,
+.section-dark-200 .stat strong,
+.section-dark-300 .stat strong,
+.section-dark-400 .stat strong { color: var(--frost-sky); }
+
+/* Reflection columns: coloured top rule (no card) */
+.reflection-grid > div {
+    border-top: 3px solid var(--aurora-green);
+    padding-top: 1.25rem;
+}
+.reflection-grid > div:nth-child(2) { border-top-color: var(--aurora-orange); }
+.reflection-grid > div:nth-child(3) { border-top-color: var(--frost-ocean); }
+
+/* Pull quote: big opening mark */
+.pull-quote { position: relative; }
+.pull-quote::before {
+    content: "\201C";
+    position: absolute;
+    left: -.15rem;
+    top: -1.4rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--aurora-yellow);
+    opacity: .6;
+    pointer-events: none;
+}
+
+/* Zoomable images (modal.js) are clickable: lift + zoom cursor */
+img.zoomable {
+    cursor: zoom-in;
+    transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out);
+}
+img.zoomable:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Dropdown: card look */
+.nav-links .projects-dropdown {
+    border-radius: 12px;
+    padding: .4rem;
+    box-shadow: var(--card-shadow-hover);
+}
+.nav-links .projects-dropdown a { border-radius: 8px; }
+
+@media (max-width: 700px) {
+    .nav-links .projects-dropdown { box-shadow: none; padding: 0; }
+}
+
+/* One background per page: undo the light-on-dark overrides */
+.section-dark-100 a, .section-dark-200 a, .section-dark-300 a, .section-dark-400 a { color: var(--mountain-200); }
+.section-dark-100 a:hover, .section-dark-200 a:hover, .section-dark-300 a:hover, .section-dark-400 a:hover { color: var(--snow-300); }
+.decision { border-left-color: var(--frost-deep); }
+.decision .label { color: var(--polar-300); }
+.decision h3::before { color: var(--mountain-200); }
+.stat strong,
+.section-dark-100 .stat strong, .section-dark-200 .stat strong,
+.section-dark-300 .stat strong, .section-dark-400 .stat strong { color: var(--frost-deep); }

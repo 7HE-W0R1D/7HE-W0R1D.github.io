@@ -371,6 +371,15 @@
     margin-bottom: 0.5rem;
 }
 
+.making-card a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+.making-card:hover a { box-shadow: inset 400px 0 0 0 var(--mountain-200); color: var(--snow-300); }
+.making-card:focus-within { outline: 2px solid var(--frost-deep); outline-offset: 3px; }
+
 .making-card .making-tag {
     font-size: 0.8rem;
     opacity: 0.8;
@@ -445,12 +454,239 @@
 }
 .home-aside .availability { margin-top: 0; }
 
-/* Portrait in About */
-.about-photos .about-portrait { grid-column: 1 / -1; }
-.about-photos .about-portrait img { aspect-ratio: 1 / 1; object-position: 100% 65%; }
 
 @media screen and (max-width: 768px) {
     .home-top { align-items: stretch; }
     .home-aside { border-left: none; border-top: 2px solid currentColor; padding: 1.5rem 0 0; }
 }
 .home-aside .social-links { flex-wrap: wrap; gap: 0.75rem 1.5rem; }
+
+/* ==========================================================
+   Small details: cards + motion (Nov 2026)
+   ========================================================== */
+
+/* Hero: staggered entrance */
+#home h1,
+#home .intro-line,
+#home .home-aside {
+    animation: fade-up .9s var(--ease-out) both;
+}
+#home .intro-line { animation-delay: .12s; }
+#home .home-aside { animation-delay: .24s; }
+
+/* Availability: live green dot */
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+.availability::before {
+    content: "";
+    flex: 0 0 auto;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: var(--aurora-green);
+    animation: pulse-dot 2.4s ease-out infinite;
+}
+
+/* Hashtags: small lift on hover */
+.hashtag {
+    border-radius: 999px;
+    padding: .25rem .7rem;
+    transition: transform .25s var(--ease-out), background-color .25s ease, color .25s ease;
+}
+.hashtag:hover {
+    transform: translateY(-2px);
+    background-color: var(--polar-300);
+    color: var(--snow-300);
+}
+
+/* Photo strip: gentle zoom */
+.square-image {
+    overflow: hidden;
+    border-radius: 4px;
+}
+.square-image img {
+    transition: transform .6s var(--ease-out);
+}
+.square-image:hover img { transform: scale(1.04); }
+
+/* Featured projects: image zoom + growing title rule */
+.project-image {
+    overflow: hidden;
+    border-radius: 16px;
+}
+.project-image img {
+    display: block;
+    transition: transform .8s var(--ease-out);
+}
+.project-card:hover .project-image img { transform: scale(1.035); }
+
+.project-info h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    margin: .9rem auto 0;
+    background: var(--mountain-200);
+    transition: width .4s var(--ease-out);
+}
+.project-card:hover .project-info h2::after { width: 5rem; }
+
+/* Role / methods / outcome: ruled spec list (not a card) */
+.card-meta {
+    text-align: left;
+    border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+.card-meta li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: .75rem;
+    margin: 0;
+    padding: .55rem 0;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+.card-meta .label { margin-right: 0; }
+
+/* More making: cards are clickable (stretched link) */
+.making-card {
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 16px;
+    padding: .75rem .75rem 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
+}
+.making-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+}
+.making-card > img,
+.making-card > .making-placeholder {
+    border-radius: 10px;
+    transition: transform .6s var(--ease-out);
+}
+.making-card:hover > img { transform: scale(1.02); }
+.making-card h3,
+.making-card p,
+.making-card a { margin-left: .5rem; margin-right: .5rem; }
+
+.making-card a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+.making-card:hover a { box-shadow: inset 400px 0 0 0 var(--mountain-200); color: var(--snow-300); }
+.making-card:focus-within { outline: 2px solid var(--frost-deep); outline-offset: 3px; }
+
+.making-card .making-tag {
+    align-self: flex-start;
+    font-size: .72rem;
+    background: var(--snow-200);
+    color: var(--polar-300);
+    padding: .25rem .65rem;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+/* News: hairline-separated rows */
+.news-list li {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+.news-list li:last-child { border-bottom: none; }
+
+@media screen and (max-width: 768px) {
+    .project-info h2::after { margin-left: 0; }
+}
+
+/* Featured projects: the whole card is the link */
+.project-card { position: relative; cursor: pointer; }
+.project-card .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+.project-card:hover .card-link {
+    background-color: var(--polar-300);
+    box-shadow: 0 10px 20px -12px rgba(41, 48, 44, .55);
+}
+.project-card:focus-within {
+    outline: 2px solid var(--frost-deep);
+    outline-offset: 8px;
+    border-radius: 16px;
+}
+.project-card .card-link:focus-visible { outline: none; }
+
+/* ==========================================================
+   About page
+   ========================================================== */
+.about-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 4rem;
+    align-items: center;
+}
+.about-hero-text h1,
+.about-hero-text .intro-line,
+.about-avatar {
+    animation: fade-up .9s var(--ease-out) both;
+}
+.about-hero-text .intro-line { animation-delay: .12s; }
+.about-avatar { animation-delay: .2s; margin: 0; }
+
+.about-avatar img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    height: auto;
+    animation: bob 6s ease-in-out 1.2s infinite;
+}
+
+@keyframes bob {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -6px; }
+}
+
+@media screen and (max-width: 768px) {
+    .about-hero { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-avatar { order: -1; }
+    .about-avatar img { max-width: 340px; margin: 0 auto; }
+}
+
+/* Softer hero text and divider */
+#home .intro-line { color: var(--polar-400); }
+.home-aside { border-left-color: color-mix(in srgb, var(--polar-400) 22%, transparent); }
+@media screen and (max-width: 768px) {
+    .home-aside { border-top-color: color-mix(in srgb, var(--polar-400) 22%, transparent); }
+}
+
+/* Project cards: no clipping, scale the title, stack earlier */
+.project-card { overflow: visible; }
+.project-info { min-width: 0; }
+.project-info h2 { font-size: clamp(2.5rem, 4.5vw, 4rem); overflow-wrap: anywhere; }
+
+@media screen and (max-width: 1100px) {
+    .project-card {
+        flex-direction: column;
+        min-height: auto;
+        gap: 2rem;
+    }
+    .project-image { flex: none; order: -1; }
+    .project-image img { height: auto; aspect-ratio: 16 / 9; }
+    .project-info {
+        padding: 0;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .project-info h2::after { margin-left: 0; }
+    .card-meta { max-width: 36rem; width: 100%; }
+}
+
+/* News sits right under the hero, with availability on top */
+#news .works-header { margin-bottom: 2rem; }
+#news .availability { margin: 0 0 2rem; }
