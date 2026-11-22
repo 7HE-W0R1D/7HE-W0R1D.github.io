@@ -273,3 +273,202 @@
         padding-left: 1.25rem;
     }
 }
+/* ==========================================================
+   Case-study content components (portfolio overhaul, Nov 2026)
+   Reuses existing tokens; no change to existing rules above.
+   ========================================================== */
+
+/* Short lead paragraph under a section heading */
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 52rem;
+    margin-bottom: 2rem;
+}
+
+/* Readable line length for story paragraphs */
+.description-section p,
+.description-section li {
+    max-width: 52rem;
+}
+
+/* Figures with captions */
+.case-figure {
+    margin: 2.5rem 0;
+}
+
+.case-figure img,
+.case-figure video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.case-figure figcaption,
+.figure-row figcaption {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+    opacity: 0.8;
+}
+
+.case-figure.narrow {
+    max-width: 44rem;
+}
+
+/* Two or three captioned images side by side */
+.figure-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.figure-row figure {
+    margin: 0;
+}
+
+.figure-row img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.figure-row.contain img {
+    object-fit: contain;
+    background: var(--snow-300);
+}
+
+/* Key decisions */
+.decision-list {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.decision {
+    border-left: 3px solid var(--frost-sky);
+    padding: 0.25rem 0 0.25rem 1.5rem;
+}
+
+.decision h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.decision p {
+    margin-bottom: 0.5rem;
+}
+
+.decision .label {
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right: 0.4rem;
+    color: var(--frost-sky);
+}
+
+.section-light-100 .decision,
+.section-light-200 .decision,
+.section-light-300 .decision {
+    border-left-color: var(--frost-deep);
+}
+
+.section-light-100 .decision .label,
+.section-light-200 .decision .label,
+.section-light-300 .decision .label {
+    color: var(--polar-300);
+}
+
+/* Links stay readable on dark sections */
+.section-dark-100 a,
+.section-dark-200 a,
+.section-dark-300 a,
+.section-dark-400 a {
+    color: var(--frost-sky);
+}
+
+.section-dark-100 a:hover,
+.section-dark-200 a:hover,
+.section-dark-300 a:hover,
+.section-dark-400 a:hover {
+    color: var(--snow-300);
+}
+
+/* Participant quote */
+.pull-quote {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 46rem;
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--aurora-yellow);
+}
+
+.pull-quote cite {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+}
+
+/* Numbers that matter */
+.stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat strong {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat span {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Reflection: what worked / what I'd change */
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    margin-top: 1rem;
+}
+
+.reflection-grid h3 {
+    font-size: 1.6rem;
+}
+
+/* Prev / next project links at the end of a case study */
+.case-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Keep long words/links from forcing horizontal scroll on phones */
+@media (max-width: 768px) {
+    .project-header { padding: 2rem 1rem; }
+    .project-header h1 { font-size: 3rem; }
+    section { padding: 2.5rem 1rem; }
+    section h2 { font-size: 2.6rem; margin-bottom: 2rem; }
+    .section-content { max-width: calc(100vw - 2rem); }
+    .stat strong { font-size: 2.4rem; }
+}

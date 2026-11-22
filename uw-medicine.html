@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UW Medicine case study: redesigning Find a Location so patients of any background can find care.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js"></script>
+    <title>UW Medicine · Borui Wang</title>
+</head>
+
+<body>
+    <nav class="navbar" aria-label="Main">
+        <h3 class="site-title">Borui Wang</h3>
+        <ul class="nav-links">
+            <li class="projects">
+                <a href="index.html#works" aria-haspopup="true">Work ▾</a>
+                <ul class="projects-dropdown" aria-label="Projects">
+                    <li><a href="windborne.html">Windborne</a></li>
+                    <li><a href="flowcart.html">FlowCart</a></li>
+                    <li><a href="icontour.html">iContour</a></li>
+                    <li><a href="uw-medicine.html" aria-current="page">UW Medicine</a></li>
+                    <li><a href="index.html#making">More making</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <header class="project-header">
+        <h1>Care, Just a Click Away</h1>
+        <p class="note">Redesigning UW Medicine's "Find a Location" so patients of any medical or technical background
+            can find care.</p>
+    </header>
+
+    <section>
+        <img src="static/uwmedicine/web/hero.webp" class="full-width-image zoomable" style="margin: 0;"
+            alt="Collage of the redesigned screens: unified search, results with a map, location page and amenities">
+    </section>
+
+    <section class="section-light-200">
+        <div class="container section-content">
+            <h2>At a Glance</h2>
+            <p class="lead">UW Medicine runs 4 hospitals and over 300 clinics, each with its own web page, and patients
+                struggled to find the one they needed. For our HCDE capstone, our four-person team worked with UW
+                Medicine to redesign location search and create a reusable location page template, through field
+                research, two rounds of usability testing and a high-fidelity Figma prototype.</p>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>My Role</h3>
+                    <p>UX designer and researcher. I ran 2 of the usability tests, went on the Montlake field study,
+                        did the competitive analysis of UC San Diego Health, and helped with affinity mapping, user
+                        flows and the design system. I designed the map results screen from lo-fi to hi-fi, and worked
+                        on our poster, video and showcase game.</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Team &amp; Client</h3>
+                    <p>4 people, "The Locationologists": Daniel Gao, Carly Minow, Congyi Zhu and me · Sponsor: UW
+                        Medicine</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Timeline</h3>
+                    <p>Jan – Jun 2024 · 20-week capstone (10 weeks planning, 10 weeks research and design)</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Methods</h3>
+                    <p>Assumption mapping, competitive analysis, on-site field study, 6 moderated think-aloud tests,
+                        affinity mapping, user flows, lo-fi testing, expert review</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Tools</h3>
+                    <p>Figma, Miro</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Outcome</h3>
+                    <p>Plain-language search, map results and a location page template, delivered with a design
+                        system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>Research: Where People Got Lost</h2>
+            <p>We started with an assumption map to figure out what we didn't know, then looked at four competitors (UC San
+                Diego Health, UPMC, Cedars-Sinai and, for comparison, Hilton's hotel pages). Next we went to UW Medical
+                Center–Montlake ourselves with a scavenger hunt: find the parking, the cafeteria, a charging spot. Most
+                tasks rated 3 out of 5 for difficulty, and almost none of that information was online.</p>
+            <p>Then we ran <strong>6 moderated think-aloud tests</strong> on the existing site, including a non-native
+                English speaker and a senior who avoids technology. What we saw:</p>
+            <ul class="feature-list">
+                <li><strong>Too many search bars.</strong> People didn't know which one to use.</li>
+                <li><strong>Medical jargon blocked people.</strong> "Immunization" and "eye exam" lists stopped the
+                    non-native speaker; one participant spent over 5 minutes trying to find out whether a flu shot was
+                    available.</li>
+                <li><strong>Lost in navigation.</strong> Participants couldn't get back to search, resorted to Ctrl+F,
+                    and failed to find parking.</li>
+            </ul>
+            <blockquote class="pull-quote">"Why does it ask me for the location name first? How would I know where I'm
+                going if I've never been here before?"<cite>Usability test participant</cite></blockquote>
+            <div class="figure-row">
+                <figure>
+                    <img src="static/uwmedicine/web/field-signage.webp" class="zoomable" loading="lazy"
+                        alt="Hospital wayfinding sign listing blood draw, pharmacy, elevators and the cancer center">
+                    <figcaption>Field study at UWMC–Montlake: wayfinding that never appears online.</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/uwmedicine/web/affinity-grouping.webp" class="zoomable" loading="lazy"
+                        alt="Miro board with sticky notes grouped into categories such as buttons, tabs and menus">
+                    <figcaption>Affinity mapping test findings into 5 themes: UI, search, parking, inconsistent
+                        information and amenities.</figcaption>
+                </figure>
+            </div>
+
+            <h2 style="margin-top: 4rem;">Key Decisions</h2>
+            <div class="decision-list">
+                <div class="decision">
+                    <h3>One search bar that understands plain language</h3>
+                    <p><span class="label">Before</span>Separate search bars for location name, specialty and zip
+                        code</p>
+                    <p><span class="label">Why</span>Participants didn't know location names and stumbled over
+                        specialty terms. One "omni" search now accepts symptoms ("broken ankle"), providers, services and
+                        places, with suggestions as you type.</p>
+                </div>
+                <div class="decision">
+                    <h3>Results you can judge at a glance</h3>
+                    <p><span class="label">Why</span>People opened page after page to check basics. Result cards
+                        now show open/closed status, specialties, a phone number and amenity icons, next to a map with
+                        distinct hospital and clinic pins.</p>
+                    <p><span class="label">Iterated</span>In round two, the open-status color worked but the distance
+                        chip confused people, so we moved distance onto the photo and kept the color.</p>
+                    <div class="figure-row contain">
+                        <figure>
+                            <img src="static/uwmedicine/web/map-lofi.webp" class="zoomable" loading="lazy"
+                                alt="Lo-fi map results screen: a search for broken ankle, grey placeholder result cards and a placeholder map with clinic and hospital markers">
+                            <figcaption>My lo-fi map results screen, used in round one.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="static/uwmedicine/web/map-hifi.webp" class="zoomable" loading="lazy"
+                                alt="Hi-fi map results screen: result cards with photos, open status, specialties and amenity icons next to a map with hospital and clinic pins">
+                            <figcaption>The hi-fi version, with open status, distance on the photo and filters for
+                                specialty, insurance and hours.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="decision">
+                    <h3>A location page template, in sections</h3>
+                    <p><span class="label">Why</span>Each location page was laid out differently. The template orders
+                        what patients look for: overview, services (with its own search), providers, then amenities and
+                        parking, with in-page navigation.</p>
+                    <p><span class="label">Iterated</span>Lo-fi tests (3 returning and 2 new participants) showed that
+                        "Services" was too vague and the "check below" hint misled people. We renamed both, made grid
+                        the default provider view, and changed the badge to "Accepting new patients".</p>
+                </div>
+            </div>
+            <div class="figure-row contain">
+                <figure>
+                    <img src="static/uwmedicine/web/before-after-search.webp" class="zoomable" loading="lazy"
+                        alt="Before: a sparse location search. After: one search bar with explore shortcuts and provider cards">
+                    <figcaption>Search, before and after.</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/uwmedicine/web/before-after-results.webp" class="zoomable" loading="lazy"
+                        alt="Before: a plain list of locations. After: result cards beside an interactive map">
+                    <figcaption>Results, before and after.</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/uwmedicine/web/before-after-detail.webp" class="zoomable" loading="lazy"
+                        alt="Before: a dense location page. After: a sectioned page with photos, hours and provider cards">
+                    <figcaption>Location page, before and after.</figcaption>
+                </figure>
+            </div>
+
+            <h2 style="margin-top: 4rem;">Outcome</h2>
+            <p>We delivered a high-fidelity prototype and a design system built on UW Medicine's brand. At the
+                showcase, we opened with a game for our two judges, both mid-senior designers: match medical terms like
+                "nephrolithiasis" to the right clinic, then try again with plain terms like "kidney stone". The second
+                round was far easier, which is exactly what the new search does. One judge, a UW Medicine patient
+                herself, called the redesign a drastic improvement over a site that had frustrated her.</p>
+            <figure class="case-figure narrow">
+                <img src="static/uwmedicine/web/terminology-game.webp" class="zoomable" loading="lazy"
+                    alt="Colored cards with medical terms and handwritten plain-language matches on the showcase table">
+                <figcaption>The terminology matching game we used to open our showcase.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="description-section section-light-200">
+        <div class="container section-content">
+            <h2>Reflection</h2>
+            <div class="reflection-grid">
+                <div>
+                    <h3>What worked</h3>
+                    <p>Going to the hospital in person taught me the most. Walking around Montlake gave me a feel for
+                        how the place actually works, the kind of thing nobody writes on a website.</p>
+                </div>
+                <div>
+                    <h3>What I'd change</h3>
+                    <p>Our final round was a showcase review, not a task-based test. I'd compare task success on the
+                        old and new designs with patients before calling it done.</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem;"><a href="https://www.figma.com/proto/qaGQQHAYMEckU7KV167shr/Design-System--Hi-Fi?node-id=96-1398&amp;starting-point-node-id=229%3A2681&amp;t=EYmyu0E12z2TXFYP-1"
+                    target="_blank" rel="noopener noreferrer">Try the Figma prototype →</a></p>
+            <p><a href="https://sites.google.com/view/care-just-a-click-away/home"
+                    target="_blank" rel="noopener noreferrer">Read our full process book →</a></p>
+        </div>
+    </section>
+
+    <section class="description-section section-light-300">
+        <div class="container section-content case-nav">
+            <a href="icontour.html">← iContour</a>
+            <a href="index.html#making">More making →</a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer-section" id="contact">
+        <div class="footer-left">
+            <h3>Borui Wang</h3>
+            <a href="mailto:xperia.782980292@gmail.com">xperia.782980292@gmail.com</a>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/borui-wang-theworld/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/7HE-W0R1D" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

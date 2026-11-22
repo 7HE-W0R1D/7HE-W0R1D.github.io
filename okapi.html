@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OKAPI Reusables: making a reusable-cup service work for people with and without a phone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js"></script>
+    <title>OKAPI Reusables · Borui Wang</title>
+</head>
+
+<body>
+    <nav class="navbar" aria-label="Main">
+        <h3 class="site-title">Borui Wang</h3>
+        <ul class="nav-links">
+            <li class="projects">
+                <a href="index.html#works" aria-haspopup="true">Work ▾</a>
+                <ul class="projects-dropdown" aria-label="Projects">
+                    <li><a href="windborne.html">Windborne</a></li>
+                    <li><a href="flowcart.html">FlowCart</a></li>
+                    <li><a href="icontour.html">iContour</a></li>
+                    <li><a href="uw-medicine.html">UW Medicine</a></li>
+                    <li><a href="index.html#making">More making</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <header class="project-header">
+        <h1>OKAPI Reusables</h1>
+        <p class="note">Making a reusable-cup service work for people with and without a phone.</p>
+    </header>
+
+    <section>
+        <img src="static/home/web/cover-okapi.webp" class="full-width-image zoomable" style="margin: 0;"
+            alt="Redesigned OKAPI app screen showing reuse milestones next to the proposed purple OKAPI membership card">
+    </section>
+
+    <section class="section-light-200">
+        <div class="container section-content">
+            <h2>At a Glance</h2>
+            <p class="lead">OKAPI lends reusable cups through partner cafés. But to borrow one you had to scan a QR
+                code with your own phone, and then remember to bring the cup back. With OKAPI as our client, our team
+                redesigned borrowing and returning so it's easier and works for more people.</p>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Context</h3>
+                    <p>Summer project with a real client, OKAPI Reusables</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Timeline</h3>
+                    <p>Summer 2023</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Team</h3>
+                    <p>3 people</p>
+                </div>
+                <div class="overview-item">
+                    <h3>My contribution</h3>
+                    <p>User research, the lo-fi prototype, and the design of the physical membership card</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Methods</h3>
+                    <p>Competitive analysis (6 services), user research, user flows, information architecture, lo-fi and hi-fi prototyping, weekly client reviews</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>What We Learned</h2>
+            <ul class="feature-list">
+                <li><strong>Convenience decides everything.</strong> People forget to return cups and won't go out of
+                    their way to do it; more return points matter.</li>
+                <li><strong>Cost adds up.</strong> Bubble tea already costs about $6, so any extra fee feels heavy.
+                    Discounts work better than deposits.</li>
+                <li><strong>Not everyone has a phone at hand,</strong> and requiring one excludes people.</li>
+            </ul>
+
+            <h2 style="margin-top: 4rem;">The Decision: Two Paths, One Service</h2>
+            <div class="decision-list">
+                <div class="decision">
+                    <h3>A redesigned app and a membership card</h3>
+                    <p><span class="label">Why</span>An app-only flow would keep leaving out people without a phone.
+                        So we went with two paths. One is an app redesign: scan to borrow or return in about 3 seconds,
+                        see which cups you have out, and track your impact and rewards. The other is a $10
+                        tap-to-borrow membership card for people without a phone. In our journey map, frustration
+                        dropped and stayed above neutral the whole way through.</p>
+                </div>
+            </div>
+            <figure class="case-figure">
+                <img src="static/okapi/web/app-screens.webp" class="zoomable" loading="lazy"
+                    alt="Four app screens: a map of partner cafés, a home screen with borrowed cups and due dates, a milestones page with containers borrowed and waste saved, and a sheet explaining how to earn credits">
+                <figcaption>App screens: nearby cafés, your borrowed cups, milestones, and how to earn credits.
+                </figcaption>
+            </figure>
+            <figure class="case-figure narrow">
+                <img src="static/okapi/web/card-design.webp" class="zoomable" loading="lazy"
+                    alt="Sketch of a purple OKAPI card with a key-ring hole, next to a card reader mounted above a poster with a QR code">
+                <figcaption>My physical card design: UW-ish purple, small enough to carry, with a hole for a key
+                    ring. It pairs with a card reader and poster at each café.</figcaption>
+            </figure>
+            <p style="margin-top: 2rem;">The full process, from research and storyboards to the hi-fi prototype, is in
+                the project PDF.</p>
+            <button onclick="window.open('static/okapi/okapi.pdf', '_blank')">Open the full project PDF →</button>
+        </div>
+    </section>
+
+    <section class="description-section section-light-300">
+        <div class="container section-content case-nav">
+            <a href="index.html#making">← More making</a>
+            <a href="index.html#works">Selected work →</a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer-section" id="contact">
+        <div class="footer-left">
+            <h3>Borui Wang</h3>
+            <a href="mailto:xperia.782980292@gmail.com">xperia.782980292@gmail.com</a>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/borui-wang-theworld/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/7HE-W0R1D" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

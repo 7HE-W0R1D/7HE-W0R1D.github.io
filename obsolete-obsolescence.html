@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obsolete Obsolescence: a discarded VHS player turned into a hopeful little robot.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,94 +14,76 @@
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="modal.css">
     <script src="modal.js"></script>
-    <title>Obsolete Obsolescence</title>
+    <title>Obsolete Obsolescence · Borui Wang</title>
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main">
         <h3 class="site-title">Borui Wang</h3>
         <ul class="nav-links">
-            <li><a href="/index.html#home">Home</a></li>
             <li class="projects">
-                <a href="/index.html#works">My Works ▾</a>
-                <ul class="projects-dropdown">
-                    <li><a role="menuitem" href="windborne.html">Windborne</a></li>
-                    <li><a role="menuitem" href="flowcart.html">FlowCart</a></li>
-                    <li><a role="menuitem" href="u-compass.html">U Compass</a></li>
-                    <li><a role="menuitem" href="obsolete-obsolescence.html">Obsolete Obsolescence</a></li>
-                    <li><a role="menuitem" href="retroconnect.html">RetroConnect</a></li>
-                    <li><a role="menuitem" href="icontour.html">iContour</a></li>
-                    <li><a href="https://sites.google.com/view/care-just-a-click-away/home" target="_blank" rel="noopener noreferrer">UW Medicine</a></li>
-                    <li><a href="static/okapi/okapi.pdf" target="_blank" rel="noopener noreferrer">OKAPI Reusables Redesign</a></li>
+                <a href="index.html#works" aria-haspopup="true">Work ▾</a>
+                <ul class="projects-dropdown" aria-label="Projects">
+                    <li><a href="windborne.html">Windborne</a></li>
+                    <li><a href="flowcart.html">FlowCart</a></li>
+                    <li><a href="icontour.html">iContour</a></li>
+                    <li><a href="uw-medicine.html">UW Medicine</a></li>
+                    <li><a href="index.html#making">More making</a></li>
                 </ul>
             </li>
-            <li><a href="/index.html#publications">Publications</a></li>
-            <li><a href="https://drive.google.com/open?id=1p47w6TPD_0jlRlg6bKsRyRCpphHy60HE&usp=drive_fs" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            <li><a href="/index.html#about">About Me</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-
+    <main>
     <header class="project-header">
         <h1>Obsolete Obsolescence</h1>
-        <p class="note">What if it obsoletes twice?</p>
+        <p class="note">What if a machine becomes obsolete twice? A discarded VHS player reborn as a robot that still
+            hopes to be useful.</p>
     </header>
-    
+
     <section>
         <div class="video-wrapper">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3RlOi-OpZyU?si=AzKdShKE1xVEfZAj"
-                title="Obsolete Obsolescence Project Video" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
+            <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/3RlOi-OpZyU"
+                title="Obsolete Obsolescence demo video" frameborder="0"
+                allow="clipboard-write; encrypted-media; picture-in-picture" allowfullscreen loading="lazy">
             </iframe>
         </div>
     </section>
 
     <section class="section-light-200">
-        <div class="intro-content section-content">
-            <div class="intro-left">
-                <h2>Introduction</h2>
-                <div class="intro-text">
-                    <p>This project transforms a forgotten VHS machine into an interactive robot, breathing new life into obsolete technology. Inspired by Wall-E and our fascination with e-waste, the robot explores themes of obsolescence and human connection.</p>
-                    
-                    <p>This project is a testament to the creative potential of discarded technology. It sparks conversations about waste, human-machine interaction, and the ever-evolving landscape of technology.</p>
-                    
-                    <div class="keywords">
-                        <span>Keywords: </span>
-                        <strong>Speculative Design</strong>,
-                        <strong>Media Art</strong>,
-                        <strong>Obsolete technology</strong>
-                    </div>
-                        <!-- <button onclick="window.open('static/u_compass/U Compass Document Full v3.pdf', '_blank')" class="pdf-button">
-                            View Full Documentation →
-                        </button> -->
-                </div>
-            </div>
-            <div class="intro-image">
-                <img src="static/obsolete_obsolescence/PXL_20240306_013733118.jpg" alt="Obsolete Obsolescence device">
-            </div>
-        </div>
-    </section>
-
-    <section class="section-light-200">
         <div class="container section-content">
-            <h2>Overview</h2>
+            <h2>The Story</h2>
+            <p class="lead">At the UW Surplus store I found a lavender machine with a rose-gold front panel and a
+                broken, empty interior, and bought it for about three dollars, thinking it was a CD player. My
+                instructor looked at it and asked, "Are you sure this isn't a VHS machine?" I had never seen one.</p>
+            <p>That moment changed the project. I read about VHS and the video-rental shops that once connected
+                communities, and kept thinking of Wall-E: a small machine still doing its job after the world that
+                needed it has moved on. So I made the VHS player a <strong>"sentient" robot</strong>. Alone, it runs a
+                pointless routine. When someone approaches, it waves, makes noise to get their attention, and proudly
+                presents something it considers advanced: a CD. The CD is itself obsolete, hence the name.</p>
+            <p>A last-minute decision turned out to be the best one: in about 20 minutes I added sound, a working hum
+                and a "ta-da" when it presents the CD. In a dim, busy gallery, the audio is what made people stop and
+                look.</p>
             <div class="overview-grid">
                 <div class="overview-item">
                     <h3>Context</h3>
-                    <p>Quarter-long project for class: <a href="https://dxarts.washington.edu/courses/2024/winter/dxarts/471/a" target="_blank" rel="noopener noreferrer">DXARTS 471 A: Mechatronic Art, Design, and Fabrication I</a></p>
+                    <p>Solo project for <a href="https://dxarts.washington.edu/courses/2024/winter/dxarts/471/a" target="_blank" rel="noopener noreferrer">DXARTS 471: Mechatronic Art, Design and Fabrication</a>, UW</p>
                 </div>
                 <div class="overview-item">
-                    <h3>Time Frame</h3>
-                    <p>Jan. 2024 — Mar. 2024 (11 weeks)</p>
+                    <h3>Timeline</h3>
+                    <p>Jan – Mar 2024 (11 weeks)</p>
                 </div>
                 <div class="overview-item">
-                    <h3>Project Type</h3>
-                    <p>Individual Project</p>
+                    <h3>Built with</h3>
+                    <p>Salvaged VHS mechanism, servos, DC motor, motion sensor, Arduino, speaker</p>
                 </div>
                 <div class="overview-item">
-                    <h3>Platform</h3>
-                    <p>Arduino</p>
+                    <h3>Role</h3>
+                    <p>Everything: concept, mechanics, electronics, code, sound</p>
                 </div>
             </div>
         </div>
@@ -108,69 +91,63 @@
 
     <section class="description-section section-dark-200">
         <div class="container section-content">
-            <h2>Project Description</h2>
-
-                <p><i>This project is heavily inspired by the fiction cartoon "Wall-E" and my personal interest in collecting used electronics.<i></p>
-
-                <p>I was hunting for some cool "e-waste" at the UW Surplus, the official resale point for all unwanted items from the UW department, and quickly intrigued by one of the "CD players" in a pile of large and old audio & video equipment. That machine, covered by a satin lavender finish and touch of rose gold in its front panel, stands different from the rest equipment. I took it up from the shelf, lifted up the tray cover and clearly the thing is not in a working shape: huge empty space under the hood with visible cables wring in between, there is also a leaning wheel looking that the powering gear out of place. "Its like earthquake inside" I thought, "but perfect for my art piece". With over 3 dollars, I took it to my workplace.</p>
-
-                <p>I showed my machine to the instructors, and when I referred the machine as "CD Player", he was startled, checked the machine for a while and asked "Are you sure this is a CD Player, not a VHS Machine?"</p>
-
-                <p><strong>"VHS Machine?"</strong></p>
-
-                <p>"What is a VHS, is it the other name of 'video cassette'?"</p>
-
-                <p>Questions popping up from my mind. The machine, now connected with a totally unfamiliar and unexpected name, emits an undeniable force, pulling me toward another world, a world that ceased to exist before I was born, a world that is bulky and dated, static noise and snowflake in my memory, a world that capsuled all colorful, joyful, and wonderful memories in video tapes.</p>
-
-                <p>My project path changed from the moment, I started to explore the iteration of machines and technologies and what happened when they were abandoned. I did research on what VHS tape is, how it is developed, adopted, and discarded. I watched videos and read posts about the giant industry of tape renting behind it: similar to the streaming service we have now, but also more humanized and connected to community. Many say that they remember the friendly salesperson in the tape shop, but no one will say they miss that one customer service representative from Netflix. The VHS machine and the world behind it consists many interesting stories and people's memories, but they irreversibly get lost in the advance of technology.</p>
-
-                <p>I learned the concept "sentient robot" from the instructor. Which are machines that can think and feel like a human. It is exactly what I'm trying to achieve - turning the VHS machine into a humanized robot, that is abandoned by the world but still has its last hope of keeping up.</p>
-
-                <p>From the moment I saw how the tape tray in VHS machine moves, I thought about Wall-E. The little waste management machine who is doing works that nobody cares, and in a place where human already left. Now I discovered that the VHS machine is in the exact same situation, where the world it belongs to has already been left over, and its function is not needed by people anymore.</p>
-
-                <p>I built the machine around the concept of <strong>"obsolete", "sentient", and "hope".</strong> I coded the robot so that it does some pointless routine works when nobody is nearby; and when someone is close, it waves at you and makes noise to catch your attention. Then it presents you something it determined as advanced, hoping that it can still serve a purpose after abandoned by the world. I set the "something" to be a CD disc, which not only represents that I misidentified it as a CD player, but also adds a conflict by the fact that what is considered as advanced is also obsoleted for many years. This double layer of obsolescence is also where I come up with the name of this project. After installed, the iridescent light beams of the CD disc add another bright stroke to the aesthetic of the project.  </p>
-
-                <p>Just before I finished my build, I decided to try and add some audio feedback to the machine. With just over 20 minutes (including 10 minutes trying to find a proper speaker), I managed to make it buzz when doing its routine job and do a "ta-da" opening sound when it want to present the CD to someone. And this turned out to be the best 20 minutes I spent. The buzzing sound makes the robot so much lively and the "ta-da" sound strongly emphasized its excitement when presenting the CD. Also, in a gallery setting where lighting condition is complex, adding some audio cue can help grab the audiences' attention and remind them what is going on with the project.</p>
-
+            <h2>The Build</h2>
+            <p>I reused the original tape-tray mechanism for the robot's main movement. Servos drive a waving "hand" and
+                a mock reading head, and a hidden motor pushes the tray out to present the CD, whose iridescent surface
+                catches the light.</p>
+            <div class="figure-row">
+                <figure>
+                    <img src="static/obsolete_obsolescence/web/PXL_20240207_181125090.webp" class="zoomable" loading="lazy"
+                        alt="Salvaged mechanical parts from the VHS player laid out on a bench">
+                    <figcaption>Taking the VHS player apart to see what could still move.</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/obsolete_obsolescence/web/PXL_20240221_014248636.webp" class="zoomable" loading="lazy"
+                        alt="The VHS player's open interior with new wiring and servos installed">
+                    <figcaption>New electronics fitted around the original tray mechanism.</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/obsolete_obsolescence/web/PXL_20240305_023736722.webp" class="zoomable" loading="lazy"
+                        alt="Close-up of the servo-driven waving hand mechanism">
+                    <figcaption>The waving-hand mechanism.</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/obsolete_obsolescence/web/PXL_20240306_013653049.webp" class="zoomable" loading="lazy"
+                        alt="Top-down view of the finished robot with a CD on its extended tray">
+                    <figcaption>Finished: presenting its CD.</figcaption>
+                </figure>
             </div>
-    </section>
-
-    <section class="description-section section-dark-200">
-        <div class="container section-content">
-            <h2>Design and Functionality</h2>
-
-                <p>"Obsolete Obsolescence" reimagines the VHS machine through a combination of salvaged parts and modern electronics. The original mechanical assembly, including the iconic tape tray, is repurposed to create the robot's movements. Servos control the "waving hand" and a simulated reading head, while a hidden motor powers the tray extension.</p>
-
-                <p>When a person approaches, detected by a motion sensor, the robot comes alive. It performs a series of actions: waving, lighting up with iridescent CD light, and presenting a CD – a playful nod to the machine's mistaken identity. Soundscapes further enhance the experience, with a "ta-da" announcing the CD presentation and a soft hum during routine movements.</p>
-
-                <div class="description-images">
-                    <img src="static/obsolete_obsolescence/PXL_20240207_181125090.jpg" alt="Part of the VHS machine" class="zoomable">
-                    <img src="static/obsolete_obsolescence/PXL_20240221_014248636.jpg" alt="VHS machine internal structure" class="zoomable">
-                    <img src="static/obsolete_obsolescence/PXL_20240305_023736722.jpg" alt="Robot waving hand mechanism" class="zoomable">
-                </div>
-
-                <img src="static/obsolete_obsolescence/PXL_20240306_013653049.jpg" alt="Top down view of the robot" class="zoomable full-width-image">
-
         </div>
     </section>
 
+    <section class="description-section section-light-200">
+        <div class="container section-content">
+            <h2>What I Learned</h2>
+            <p class="lead">I found I'm more comfortable expressing ideas through experimental art than I expected, and
+                I loved it. This project started my path toward reflective and speculative design research, and it's
+                personally one of my most important projects.</p>
+        </div>
+    </section>
 
+    <section class="description-section section-light-300">
+        <div class="container section-content case-nav">
+            <a href="index.html#making">← More making</a>
+            <a href="index.html#works">Selected work →</a>
+        </div>
+    </section>
+    </main>
 
-    <footer class="footer-section">
+    <footer class="footer-section" id="contact">
         <div class="footer-left">
             <h3>Borui Wang</h3>
-            <a href="mailto:bw559@cornell.edu">bw559@cornell.edu</a>
-                <p style="font-size: 0.75rem;">Designed by Borui · Created with AI</p>
+            <a href="mailto:xperia.782980292@gmail.com">xperia.782980292@gmail.com</a>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/borui-wang-theworld/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/7HE-W0R1D" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
         </div>
-        <div class="footer-right">
-            <p class="note bold">Architectural Robotics Lab</p>
-            <p class="note">Room 212</p>
-            <p class="note">Cornell University, 37 Forest Home Dr</p>
-            <p class="note">Ithaca, NY 14850</p>
-        </div>
-
     </footer>
-
 </body>
 
 </html>

@@ -1,3 +1,6 @@
 .DS_Store
 /static/extras/*
 !/static/extras/UX-Portfolio-Guidelines.md
+
+# Raw content intake for portfolio overhaul (originals, not for commit)
+static/extras/intake/

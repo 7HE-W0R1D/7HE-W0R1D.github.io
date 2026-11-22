@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meanwhile: a tiny live radio station for an audience of one. Solo hackathon build, Keytos Hackathon 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Forum&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js"></script>
+    <title>Meanwhile · Borui Wang</title>
+</head>
+
+<body>
+    <nav class="navbar" aria-label="Main">
+        <h3 class="site-title">Borui Wang</h3>
+        <ul class="nav-links">
+            <li class="projects">
+                <a href="index.html#works" aria-haspopup="true">Work ▾</a>
+                <ul class="projects-dropdown" aria-label="Projects">
+                    <li><a href="windborne.html">Windborne</a></li>
+                    <li><a href="flowcart.html">FlowCart</a></li>
+                    <li><a href="icontour.html">iContour</a></li>
+                    <li><a href="uw-medicine.html">UW Medicine</a></li>
+                    <li><a href="index.html#making">More making</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <header class="project-header">
+        <h1>Meanwhile</h1>
+        <p class="note">A radio station for an audience of one.</p>
+    </header>
+
+    <section>
+        <video controls preload="metadata" poster="static/meanwhile/web/poster.webp" class="full-width-image"
+            style="margin: 0;" aria-label="Meanwhile demo video with captions: the radio dial, segments playing and the post page">
+            <source src="static/meanwhile/meanwhile-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section class="section-light-200">
+        <div class="container section-content">
+            <h2>The Idea</h2>
+            <p class="lead">Meanwhile turns one person's passing thoughts into a tiny live radio station that someone
+                far away, your chosen one or your loved one, can leave playing in the background.</p>
+            <p>The sender types a single line on <code>/post</code>. It can be about anything: something they saw, a
+                worry, a joke. Meanwhile turns it into a short radio segment (script, voice, music, mix) and broadcasts
+                it right away to everyone listening on <code>/radio</code>. Between segments the station isn't silent.
+                You hear the sender's world as it is right now: their local weather and time of day, rain or wind or
+                night-time quiet, traffic and birds, and some lo-fi. Listening feels less like reading messages and
+                more like keeping a window open onto someone else's day.</p>
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Context</h3>
+                    <p>Keytos Hackathon 2026, built in 24 hours</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Role</h3>
+                    <p>Solo: idea, sound design, interface, backend</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Built with</h3>
+                    <p>Python (stdlib HTTP + SSE), Ollama / Qwen3-14B, Kokoro TTS, ffmpeg, Web Audio API, Open-Meteo</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Outcome</h3>
+                    <p>3rd place, Health track · Best Design overall · <a href="https://demo.meanwhile.breakfastberry.live"
+                            target="_blank" rel="noopener noreferrer">live demo</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="description-section section-dark-200">
+        <div class="container section-content">
+            <h2>How It Works</h2>
+            <h3>Four kinds of segments</h3>
+            <ul class="feature-list">
+                <li><strong>Life</strong> is a short scene set over lo-fi music.</li>
+                <li><strong>Letter</strong> has the host read the note like a listener letter, answer it, and play a
+                    song.</li>
+                <li><strong>Ad</strong> is a fake commercial for the thought.</li>
+                <li><strong>Misreading</strong> reads the note back like an oracle that gets it slightly wrong.</li>
+            </ul>
+
+            <h3 style="margin-top: 2.5rem;">From a typed line to sound</h3>
+            <p>A local LLM (Qwen3 14B through Ollama) writes the script. Kokoro TTS reads it, with a different voice
+                for each segment type. ffmpeg evens out the loudness, ducks the music under the voice and adds fades.
+                Then Server-Sent Events push the finished segment to every open radio page, and the dial snaps back to
+                "now". From typing to hearing it takes about 10–30 seconds.</p>
+
+            <h3 style="margin-top: 2.5rem;">The sound of "now"</h3>
+            <p>Every 15 minutes the station pulls live weather for the sender's city from Open-Meteo, and the browser
+                synthesizes matching ambience on the fly: rain, snow, wind, room tone, night, birds at dawn. A shared
+                schedule keeps the lo-fi tracks in sync for all listeners. On the hour, a local voice reads the time
+                and weather, and the station signs off at 23:00 and comes back at 07:00.</p>
+
+            <h3 style="margin-top: 2.5rem;">Things fade</h3>
+            <p>Segments delete themselves after 7 days. The station is about the present, it's not meant to turn into
+                an archive. The dial only goes back a week.</p>
+
+            <h3 style="margin-top: 2.5rem;">Small and self-hosted</h3>
+            <p>The server is a single Python file using only the standard library. It runs on my home server with a
+                local GPU and makes no paid API calls, and the voice model only loads while it's being used.</p>
+
+            <h3 style="margin-top: 2.5rem;">Try it</h3>
+            <p>The demo station's sender lives in Seattle. Every morning it writes and airs a new week's worth of
+                segments as the real times come round, and you can post your own lines too. Visitor posts stay private
+                to your session and get deleted afterwards. All demo music is CC BY, with credits in the help panel.</p>
+            <button onclick="window.open('https://demo.meanwhile.breakfastberry.live', '_blank')">Open the live demo →</button>
+        </div>
+    </section>
+
+    <section class="description-section section-light-200">
+        <div class="container section-content">
+            <h2>What I Learned</h2>
+            <p class="lead">The ambiguity and generative potential of AI can make an exploratory project much more
+                lively.</p>
+        </div>
+    </section>
+
+    <section class="description-section section-light-300">
+        <div class="container section-content case-nav">
+            <a href="index.html#making">← More making</a>
+            <a href="index.html#works">Selected work →</a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer-section" id="contact">
+        <div class="footer-left">
+            <h3>Borui Wang</h3>
+            <a href="mailto:xperia.782980292@gmail.com">xperia.782980292@gmail.com</a>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/borui-wang-theworld/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/7HE-W0R1D" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

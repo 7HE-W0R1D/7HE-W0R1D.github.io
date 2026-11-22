@@ -279,3 +279,178 @@
         gap: 0.25rem;
     }
 }
+
+/* ==========================================================
+   Home additions (portfolio overhaul, Nov 2026)
+   ========================================================== */
+
+.intro-line {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 40rem;
+    margin-bottom: 1rem;
+}
+
+.availability {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: var(--snow-200);
+    color: var(--polar-300);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.education.compact .degree {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0.15rem;
+}
+
+/* Featured project cards: who / what / evidence */
+.card-meta {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-width: 26rem;
+}
+
+.card-meta li {
+    margin-bottom: 0.35rem;
+}
+
+.card-meta .label {
+    font-weight: 600;
+    color: var(--mountain-300);
+    margin-right: 0.35rem;
+}
+
+/* "More making" compact grid */
+.making-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.making-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.making-card img,
+.making-card .making-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.making-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--polar-400), var(--frost-deep));
+    color: var(--snow-300);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.making-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.making-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.making-card .making-tag {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.making-card a {
+    font-size: 1.1rem;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* About */
+.about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-text p {
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    max-width: 44rem;
+}
+
+.about-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.about-photos figure {
+    margin: 0;
+}
+
+.about-photos img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.about-photos figcaption {
+    font-size: 0.75rem;
+    margin-top: 0.35rem;
+    opacity: 0.8;
+}
+
+/* Contact block in footer */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0.5rem 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .home-top { gap: 2rem; }
+    #home h1 { font-size: 2.8rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .project-info { align-items: flex-start; text-align: left; }
+}
+
+/* Hero without image: intro on the left, quick facts on the right */
+.home-top { gap: 6rem; align-items: flex-end; }
+.home-part-a { flex: 1 1 58%; max-width: none; }
+.home-aside {
+    flex: 1 1 42%;
+    border-left: 2px solid currentColor;
+    padding-left: 2rem;
+}
+.home-aside .availability { margin-top: 0; }
+
+/* Portrait in About */
+.about-photos .about-portrait { grid-column: 1 / -1; }
+.about-photos .about-portrait img { aspect-ratio: 1 / 1; object-position: 100% 65%; }
+
+@media screen and (max-width: 768px) {
+    .home-top { align-items: stretch; }
+    .home-aside { border-left: none; border-top: 2px solid currentColor; padding: 1.5rem 0 0; }
+}
+.home-aside .social-links { flex-wrap: wrap; gap: 0.75rem 1.5rem; }

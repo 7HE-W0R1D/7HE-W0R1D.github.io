@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iContour case study: a web platform giving radiation-oncology residents instant feedback on tumor contours.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,93 +14,82 @@
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="modal.css">
     <script src="modal.js"></script>
-    <title>iContour</title>
+    <title>iContour · Borui Wang</title>
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main">
         <h3 class="site-title">Borui Wang</h3>
         <ul class="nav-links">
-            <li><a href="/index.html#home">Home</a></li>
             <li class="projects">
-                <a href="/index.html#works">My Works ▾</a>
-                <ul class="projects-dropdown">
-                    <li><a role="menuitem" href="windborne.html">Windborne</a></li>
-                    <li><a role="menuitem" href="flowcart.html">FlowCart</a></li>
-                    <li><a role="menuitem" href="u-compass.html">U Compass</a></li>
-                    <li><a role="menuitem" href="obsolete-obsolescence.html">Obsolete Obsolescence</a></li>
-                    <li><a role="menuitem" href="retroconnect.html">RetroConnect</a></li>
-                    <li><a role="menuitem" href="icontour.html">iContour</a></li>
-                    <li><a href="https://sites.google.com/view/care-just-a-click-away/home" target="_blank" rel="noopener noreferrer">UW Medicine</a></li>
-                    <li><a href="static/okapi/okapi.pdf" target="_blank" rel="noopener noreferrer">OKAPI Reusables Redesign</a></li>
+                <a href="index.html#works" aria-haspopup="true">Work ▾</a>
+                <ul class="projects-dropdown" aria-label="Projects">
+                    <li><a href="windborne.html">Windborne</a></li>
+                    <li><a href="flowcart.html">FlowCart</a></li>
+                    <li><a href="icontour.html" aria-current="page">iContour</a></li>
+                    <li><a href="uw-medicine.html">UW Medicine</a></li>
+                    <li><a href="index.html#making">More making</a></li>
                 </ul>
             </li>
-            <li><a href="/index.html#publications">Publications</a></li>
-            <li><a href="https://drive.google.com/open?id=1p47w6TPD_0jlRlg6bKsRyRCpphHy60HE&usp=drive_fs" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            <li><a href="/index.html#about">About Me</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#publications">Publications</a></li>
+            <li><a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <main>
     <header class="project-header">
         <h1>iContour</h1>
-        <p class="note">A web-based radiologist training with real-time feedback</p>
-        <p class="note">Proudly with Weibel's Lab @ UCSD</p>
+        <p class="note">A web platform where radiation-oncology residents practice outlining tumors and get instant
+            feedback against an expert's contour.</p>
     </header>
 
-    <section class="section-light-200">
-        <div class="intro-content section-content">
-            <div class="intro-left">
-                <h2>Introduction</h2>
-                <div class="intro-text">
-                    <p><strong>What is this site about?</strong></p>
-                    <p>iContour is a web-based contouring training system to address the challenges of traditional apprenticeship model in radiation oncology. Contouring is a vital process in radiology to outline target tumor volumes and organs at risk on medical images to guide radiation therapy treatment planning. The traditional apprenticeship model, however, is limited by the availability of faculty, lack of timely and flexible learning opportunities, as well as limited diversity in feedback. iContour aims to revolutionize the training of radiation oncology residents and clinicians and facilitate high-quality training resources and real-time, personalized feedback, better training residents to perform complex contouring tasks, ultimately to improved patient care.</p>
-                    
-                    <div class="keywords">
-                        <span>Keywords: </span>
-                        <strong>HCI Research</strong>,
-                        <strong>Web Interface</strong>,
-                        <strong>Healthcare</strong>,
-                        <strong>Interdisciplinary Project</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="intro-image">
-                <img src="static/icontour/Rectangle (1).png" alt="iContour interface">
-            </div>
-        </div>
+    <section>
+        <img src="static/icontour/web/rectangle-1.webp" class="full-width-image zoomable" style="margin: 0;"
+            alt="The iContour interface on a tablet: a CT scan with a contouring toolbar on the right">
     </section>
 
     <section class="section-light-200">
         <div class="container section-content">
-            <h2>Overview</h2>
+            <h2>At a Glance</h2>
+            <p class="lead">Radiation oncologists must outline ("contour") tumors and organs on CT scans before
+                treatment. Residents learn this through apprenticeship, which depends on busy faculty and gives slow,
+                uneven feedback. At UC San Diego's Weibel Lab, I redesigned iContour's interface and rebuilt key parts
+                of its backend, so residents can practice on real cases and immediately see how their contour compares
+                with an expert's.</p>
             <div class="overview-grid">
                 <div class="overview-item">
-                    <h3>Context</h3>
-                    <p>In the field of radiation oncology, contouring is a vital step in treatment planning. The accuracy and efficiency of contouring directly impact patient care. The existing challenges in training methods necessitate a technology-driven solution to enhance the learning experience for residents and clinicians.</p>
-                </div>
-                <div class="overview-item">
-                    <h3>Problem</h3>
-                    <p>Traditional apprenticeship models in radiation oncology for contouring training face limitations such as faculty availability, inflexible learning opportunities, and inadequate feedback diversity, hindering effective skill development for residents.</p>
-                </div>
-                <div class="overview-item">
-                    <h3>Goal</h3>
-                    <p>The iContour project aims to revolutionize radiation oncology training by creating a web-based contouring training system. The goal is to provide real-time, personalized feedback, diverse learning opportunities, and improved user interfaces. Ultimately, the project strives to enhance the skills of residents, leading to improved patient care.</p>
-                </div>
-                <div class="overview-item">
-                    <h3>Time Frame</h3>
-                    <p>Jun. 2022 — Now</p>
-                </div>
-                <div class="overview-item">
                     <h3>My Role</h3>
-                    <p>Researcher, UI/UX Designer, Full Stack Developer</p>
-                </div>
-                <div class="overview-item">
-                    <h3>Platform</h3>
-                    <p>Web, Python, Jupyter Notebook, Ubuntu Server</p>
+                    <p>UI/UX designer and full-stack developer: designed and built the new web interface, maintained
+                        the Python backend on a Linux server, added data export and cleaning, and repaired the broken
+                        scoring analysis</p>
                 </div>
                 <div class="overview-item">
                     <h3>Team</h3>
-                    <p>PI: <a href="https://hxi.ucsd.edu/author/nadir-weibel/" target="_blank" style="text-decoration: underline; color: inherit; font-family: inherit; font-size: inherit; font-weight: inherit;">Nadir Weibel</a><br>PhD Students at time: <a href="https://www.matinyarmand.com/" target="_blank" style="text-decoration: underline; color: inherit; font-family: inherit; font-size: inherit; font-weight: inherit;">Matin Yarmand</a>, <a href="https://users.cs.fiu.edu/~chechen/" target="_blank" style="text-decoration: underline; color: inherit; font-family: inherit; font-size: inherit; font-weight: inherit;">Chen Chen</a><br>Undergraduate Researchers: <strong>Borui Wang</strong>, Kexin Cheng, Peter Liu<br>Radiologists: Michael Sherer, James Murphy</p>
+                    <p>PI <a href="https://hxi.ucsd.edu/author/nadir-weibel/" target="_blank"
+                            rel="noopener noreferrer">Nadir Weibel</a>; PhD students <a
+                            href="https://www.matinyarmand.com/" target="_blank" rel="noopener noreferrer">Matin
+                            Yarmand</a> and <a href="https://users.cs.fiu.edu/~chechen/" target="_blank"
+                            rel="noopener noreferrer">Chen Chen</a>; undergraduate researchers including Kexin Cheng,
+                        Peter Liu and me; radiation oncologists Michael Sherer and James Murphy</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Timeline</h3>
+                    <p>Jun 2022 – May 2024</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Methods</h3>
+                    <p>Weekly design sessions with 5 clinicians over two semesters, usability testing, iterative
+                        redesign</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Tools</h3>
+                    <p>HTML/CSS/JavaScript, Python, Jupyter, Ubuntu server</p>
+                </div>
+                <div class="overview-item">
+                    <h3>Outcome</h3>
+                    <p>Multi-institution pilot with 9 residents · CHI EA '23, DIS '24, IJROBP, ACRO '23</p>
                 </div>
             </div>
         </div>
@@ -107,130 +97,162 @@
 
     <section class="description-section section-dark-200">
         <div class="container section-content">
-            <h2>Design</h2>
-            <h3>Current Design</h3>
-
-            <img src="static/icontour/iContour now.png" alt="iContour Now" class="zoomable full-width-image">
-
-            <p>After I conducted the participatory design protocols with clinicians and meet with them to get their feedbacks, I discovered that they perform both fast and precise navigations of the slides, and they prefer not to switch between mouse and keyboard often. Based on their needs, I implemented a scrolling slide selector to allow for fast yet accurate slide browsing. Clinicians can scroll to quickly get to a distant slide, click on a number to go directly to one slide, or use arrow keys to peek between adjacent slides.</p>
-            <p>Since I joined the team after they've done the initial user research and design, I focused on improving their current design system and user experience.</p>
-
-            <h3>Previous Design (June 2022)</h3>
-
-            <img src="static/icontour/iContour before.jpg" alt="iContour Before" class="zoomable full-width-image">
-
-            <p>Before I joined, the web interface only provided four buttons and one numeric input to change medical image slides. Clinicians can go forward or backward by one or two slides, and they can go directly to a slide by inputting the slide index.</p>
-            <p>However, this interaction requires frequent mouse clicks in different locations, and it is hard to preview the trend the images over a long range.</p>
-
-            <h3>Highlights</h3>
-            <h4>Digital Crown</h4>
-            <p>Radiologists often need to slide between two or more images to compare and see trends between them. So I designed a scrolling "crown" to navigate between slices. The digital crown can be slide with finger, stylus, and mouse wheel. For a more precise control, users can tap on a specific slice number and the crown will automatically scroll to that slice. This redesigned way of navigation is well-praised within test users for its ease of use and efficiency.</p>
-
-            <h4>Digital Crown Demo</h4>
-            <video controls width="100%" class="full-width-image">
-                <source src="static/icontour/iContour crown demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <h4>Information Panel</h4>
-            <p>On the top of the sidebar, there's an information panel that is used to display patient information, task description, and calculated results. Design choices are carefully made to provide users with a smooth experience.</p>
-            <ul>
-                <li>On the first image, target slice is highlighted in purple; users can click on the slice number and they will be brought to the corresponding slice</li>
-                <li>On the second and third image, toxicity values are highlighted in different colors. Expert toxicity values are outlined rather than filled to show that they are less important than the users' values</li>
-                <li>On the fourth image, when the server is doing toxicity calculation, a loading animation is shown to provide feedback to the user and show them what task is going on</li>
-            </ul>
-
-            <div class="description-images">
-                <img src="static/icontour/Result display 1.png" alt="Result display 1" class="zoomable">
-                <img src="static/icontour/Result display 2.png" alt="Result display 2" class="zoomable">
-                <img src="static/icontour/Result display 3.png" alt="Result display 3" class="zoomable">
-                <img src="static/icontour/Result display 4.png" alt="Result display 4" class="zoomable">
+            <h2>Designing with Clinicians</h2>
+            <p>For two semesters, we met weekly with 5 radiation oncologists and residents. They contoured in the tool,
+                told us what slowed them down, and tried the new version the week after. Pretty much every decision
+                below came out of that loop.</p>
+            <div class="figure-row contain">
+                <figure>
+                    <img src="static/icontour/web/icontour-before.webp" class="zoomable" loading="lazy"
+                        alt="The June 2022 iContour interface with stacked previous and next buttons beside a CT scan">
+                    <figcaption>Before (June 2022): slices changed one at a time with previous/next buttons.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="static/icontour/web/icontour-now.webp" class="zoomable" loading="lazy"
+                        alt="The redesigned iContour interface with a dark theme, slice dial and vertical toolbar">
+                    <figcaption>After: a dark, scan-first layout with a slice dial and one compact toolbar.
+                    </figcaption>
+                </figure>
             </div>
 
-
-
-        </div>
-    </section>
-
-    <section class="description-section section-dark-200">
-        <div class="container section-content">
-            <h2>Backend Developing</h2>
-            <h3>Python</h3>
-            <p>Apart from the front-end, I also actively contribute to the back-end of the project. After the last undergrad left the team in August, I took all the developing and designing work for the team — from HTML to Python to Command line. The project relies on the backend to store medical data, calculate toxicity values, and run the machine learning model, they communicate through API calls. I started by reading the codes, then fixing some bugs, then adding more features.</p>
-
-            <h3>Jupyter Notebook</h3>
-            <p>This project relies on machine learning model to predict toxicity values. To visualize input and output data and debug, I'm running a Jupyter server to show these data in real-time. Thanks to Jupyter's mechanism, I'm able to see the data and changes immediately without restarting the server. This greatly facilitated my developing speed.</p>
-
-            <h3>Linux Command Line</h3>
-            <p>This project runs on a AWS machine, so command line is used to make all the changes in the server. I'm able to skillfully use command line to manipulate the server, to make changes to the machine, and to debug the site.</p>
-        </div>
-    </section>
-
-    <section class="description-section section-dark-200">
-        <div class="container section-content">
-            <h2>Latest Developments: Intelligent Tutoring System in Contouring</h2>
-            <p>Building on iContour's success, we are now developing an Intelligent Tutoring System for contouring, the first of its kind in the medical domain.</p>
-            <h3>Key Features</h3>
-            <ul>
-                <li>Implemented a nudge system inspired by behavioral sciences to provide just-in-time feedback.</li>
-                <li>Developed a pipeline using Python, Bezier curves, and JavaScript to enhance user learning without disrupting the workflow.</li>
-                <li>Conducting a nationwide trial study in early 2024 to evaluate the system's effectiveness in real-world medical scenarios.</li>
-            </ul>
-
-            <div class="description-images">
-                <img src="static/icontour/Frame 9 1.png" alt="Arrow closeup 1" class="zoomable">
-                <img src="static/icontour/Frame 10 1.png" alt="Dashed closeup 2" class="zoomable">
-                <img src="static/icontour/Frame 11 1.png" alt="Smoothed closeup 3" class="zoomable">
+            <h2 style="margin-top: 4rem;">Key Decisions</h2>
+            <div class="decision-list">
+                <div class="decision">
+                    <h3>A dial for moving through slices</h3>
+                    <p><span class="label">Before</span>+1 / −1 buttons, slow when a scan has hundreds of slices.
+                        Clinicians asked for something faster.</p>
+                    <p><span class="label">Considered</span>A horizontal timeline like a video editor</p>
+                    <p><span class="label">Why</span>A timeline would confuse anyone without video-editing experience.
+                        A "digital crown" dial scrubs quickly and still allows fine, single-slice moves.</p>
+                </div>
+                <div class="decision">
+                    <h3>Feedback on the same screen as the scan</h3>
+                    <p><span class="label">Considered</span>A pop-up or separate results page, which would give more
+                        room for information</p>
+                    <p><span class="label">Why</span>In testing I noticed residents went back to compare their contour
+                        with the expert's after seeing their score; that comparison is where the learning happens. A
+                        separate page would make it hard or impossible, so the results panel sits beside the scan.</p>
+                </div>
+                <div class="decision">
+                    <h3>Show what the backend is doing</h3>
+                    <p><span class="label">Why</span>Scores take time to compute, and a blank wait made people unsure
+                        whether their submission had worked. The panel now shows calculation status before results
+                        appear.</p>
+                </div>
+            </div>
+            <figure class="case-figure narrow">
+                <video controls muted loop playsinline preload="metadata"
+                    aria-label="Screen recording: dragging the dial scrolls quickly through CT slices">
+                    <source src="static/icontour/iContour crown demo.mp4" type="video/mp4">
+                </video>
+                <figcaption>The slice dial in use: fast scrubbing, precise stops. (Silent screen recording.)
+                </figcaption>
+            </figure>
+            <div class="figure-row contain">
+                <figure>
+                    <img src="static/icontour/web/result-display-1.webp" class="zoomable" loading="lazy"
+                        alt="Results panel showing a Dice score of 0.09, an expert contour toggle and an NTCP value">
+                    <figcaption>Results appear beside the scan: overlap with the expert (DSC) and toxicity risk (NTCP).
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="static/icontour/web/frame-11-1.webp" class="zoomable" loading="lazy"
+                        alt="A resident's contour drawn as a solid line around an organ on a CT slice">
+                    <figcaption>The resident's contour…</figcaption>
+                </figure>
+                <figure>
+                    <img src="static/icontour/web/frame-9-1.webp" class="zoomable" loading="lazy"
+                        alt="The expert's contour drawn as a dotted line around the same organ">
+                    <figcaption>…compared directly with the expert's (dotted).</figcaption>
+                </figure>
             </div>
 
+            <h2 style="margin-top: 4rem;">Fixing the Engine</h2>
+            <p>A nice interface doesn't help much if the numbers behind it are wrong. This was before AI coding tools,
+                so I learned the lab's Python pipeline on a Linux server the slow way. I fixed the analysis function
+                behind the scores (it had stopped working) and added data export and cleaning so the research team
+                could actually analyze the study results.</p>
+
+            <h2 style="margin-top: 4rem;">Outcome</h2>
+            <p>The team ran a pilot study with 9 residents from 5 institutions in 2 countries, published in IJROBP.
+                My part was setting up the system for the study and collecting the data.</p>
+            <div class="stat-row">
+                <div class="stat"><strong>9 / 9</strong><span>named the visual comparison with expert contours the most
+                        useful feedback</span></div>
+                <div class="stat"><strong>4.67 / 5</strong><span>average usefulness rating</span></div>
+                <div class="stat"><strong>7 / 9</strong><span>found it more useful than their existing learning
+                        resources</span></div>
+            </div>
+            <p>The work also led to a DIS '24 paper on contouring across devices: in a lab study with 8 residents,
+                contouring on a phone was about as accurate as on a desktop and significantly faster.</p>
         </div>
     </section>
 
     <section class="description-section section-light-200">
         <div class="container section-content">
-            <h2>Publications & Recognition</h2>
+            <h2>Reflection</h2>
+            <div class="reflection-grid">
+                <div>
+                    <h3>What worked</h3>
+                    <p>Weekly contact with real clinicians. Small design changes were tested within days, and their
+                        feedback turned "a nicer UI" into decisions I could justify.</p>
+                </div>
+                <div>
+                    <h3>What I'd change</h3>
+                    <p>Much of my time went into backend plumbing. With today's AI-assisted development I'd spend that
+                        time gathering more feedback and iterating faster.</p>
+                </div>
+                <div>
+                    <h3>What I took away</h3>
+                    <p>In expert tools, the interface's job is to keep people close to the material. The best feedback
+                        sat right next to the scan.</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem;">Publications</h2>
             <div class="publication-item">
-                <h3>Results From a Multi-Institutional Pilot Study of iContour, an Interactive Online Platform with Real-Time Feedback to Improve Contouring Education for Radiation Oncology Residents</h3>
-                <p>M. E. Orr, A. Dornisch, E. A. M. Duran, M. Yarmand, B. Wang, N. Weibel, E. F. Gillespie, J. D. Murphy, and M. V. Sherer</p>
-                <p><a href="https://doi.org/10.1016/j.ijrobp.2023.06.1825" target="_blank">https://doi.org/10.1016/j.ijrobp.2023.06.1825</a></p>
-                <p>American Society for Therapeutic Radiology and Oncology (ASTRO 2023)</p>
+                <h3>Results From a Multi-Institutional Pilot Study of iContour</h3>
+                <p>Orr, Dornisch, Duran, Yarmand, Wang, Weibel, Gillespie, Murphy &amp; Sherer · IJROBP, 2023</p>
+                <p><a href="https://doi.org/10.1016/j.ijrobp.2023.06.1825" target="_blank"
+                        rel="noopener noreferrer">doi:10.1016/j.ijrobp.2023.06.1825</a></p>
             </div>
             <div class="publication-item">
-                <h3>Design and Development of a Training and Immediate Feedback Tool to Support Healthcare Apprenticeship</h3>
-                <p>M Yarmand, B Wang, C Chen, M Sherer, L Hernandez, J Murphy, N Weibel</p>
-                <p>Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems, 2023</p>
-                <p><a href="https://doi.org/10.1145/3544549.3585894" target="_blank">https://doi.org/10.1145/3544549.3585894</a></p>
+                <h3>Enhancing Accuracy, Time Spent, and Ubiquity in Critical Healthcare Delineation via Cross-Device
+                    Contouring</h3>
+                <p>Yarmand, Chen, Sherer, Shah, Liu, Wang, Hernandez, Murphy &amp; Weibel · DIS '24</p>
+                <p><a href="https://doi.org/10.1145/3643834.3660718" target="_blank"
+                        rel="noopener noreferrer">doi:10.1145/3643834.3660718</a></p>
             </div>
             <div class="publication-item">
-                <h3>Design-thinking Workshops and Survey to Assess Approaches for Contouring Feedback Exchange in Radiation Oncology</h3>
-                <p>Kexin Cheng, Matin Yarmand, Michael V. Sherer, Chen Chen, Borui Wang, Nadir Weibel, James D. Murphy</p>
-                <p>The 2023 Radiation Oncology Summit (ACRO), Lake Buena Vista, FL</p>
+                <h3>Design and Development of a Training and Immediate Feedback Tool to Support Healthcare
+                    Apprenticeship</h3>
+                <p>Yarmand, Wang, Chen, Sherer, Hernandez, Weibel &amp; Murphy · CHI EA '23</p>
+                <p><a href="https://doi.org/10.1145/3544549.3585894" target="_blank"
+                        rel="noopener noreferrer">doi:10.1145/3544549.3585894</a></p>
             </div>
         </div>
     </section>
 
-    <section class="description-section section-dark-300">
-        <div class="container section-content">
-            <h2>Want to Know More?</h2>
-            <p>Visit the site and try by yourself! Put &lt;YourName&gt;_1_11_3 in the popup on the site.</p>
-            <button onclick="window.open('https://icontour.example.com')">Visit iContour →</button>
+    <section class="description-section section-light-300">
+        <div class="container section-content case-nav">
+            <a href="flowcart.html">← FlowCart</a>
+            <a href="uw-medicine.html">Next: UW Medicine →</a>
         </div>
     </section>
+    </main>
 
-    <footer class="footer-section">
+    <footer class="footer-section" id="contact">
         <div class="footer-left">
             <h3>Borui Wang</h3>
-            <a href="mailto:bw559@cornell.edu">bw559@cornell.edu</a>
-                <p style="font-size: 0.75rem;">Designed by Borui · Created with AI</p>
-        </div>
-        <div class="footer-right">
-            <p class="note bold">Architectural Robotics Lab</p>
-            <p class="note">Room 212</p>
-            <p class="note">Cornell University, 37 Forest Home Dr</p>
-            <p class="note">Ithaca, NY 14850</p>
+            <a href="mailto:xperia.782980292@gmail.com">xperia.782980292@gmail.com</a>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/borui-wang-theworld/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/7HE-W0R1D" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="static/resume/Borui-Wang-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
         </div>
     </footer>
-
 </body>
 
 </html>
