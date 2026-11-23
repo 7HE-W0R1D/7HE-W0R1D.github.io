@@ -458,13 +458,16 @@ a:hover {
     margin: 0;
 }
 
-.site-title a {
+/* Name links home but looks exactly like plain text */
+.site-title a,
+.site-title a:hover {
     font: inherit;
     color: inherit;
     margin: 0;
     padding: 0;
+    box-shadow: none;
+    transition: none;
 }
-.site-title a:hover { color: var(--mountain-200); }
 
 .nav-links {
     display: flex;
