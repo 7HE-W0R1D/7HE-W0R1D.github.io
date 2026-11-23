@@ -512,16 +512,15 @@
 }
 .square-image:hover img { transform: scale(1.04); }
 
-/* Featured projects: image zoom + growing title rule */
+/* Featured projects: rounded image + title rule (no card hover effects,
+   since the card isn't clickable; only the button is) */
 .project-image {
     overflow: hidden;
     border-radius: 16px;
 }
 .project-image img {
     display: block;
-    transition: transform .8s var(--ease-out);
 }
-.project-card:hover .project-image img { transform: scale(1.035); }
 
 .project-info h2::after {
     content: "";
@@ -530,9 +529,7 @@
     height: 2px;
     margin: .9rem auto 0;
     background: var(--mountain-200);
-    transition: width .4s var(--ease-out);
 }
-.project-card:hover .project-info h2::after { width: 5rem; }
 
 /* Role / methods / outcome: ruled spec list (not a card) */
 .card-meta {
@@ -603,23 +600,7 @@
     .project-info h2::after { margin-left: 0; }
 }
 
-/* Featured projects: the whole card is the link */
-.project-card { position: relative; cursor: pointer; }
-.project-card .card-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-}
-.project-card:hover .card-link {
-    background-color: var(--polar-300);
-    box-shadow: 0 10px 20px -12px rgba(41, 48, 44, .55);
-}
-.project-card:focus-within {
-    outline: 2px solid var(--frost-deep);
-    outline-offset: 8px;
-    border-radius: 16px;
-}
-.project-card .card-link:focus-visible { outline: none; }
+/* Featured projects: only the button is a link; the card itself is static */
 
 /* ==========================================================
    About page

@@ -727,6 +727,7 @@ a[href^="mailto:"],
    ========================================================== */
 :root {
     --ease-out: cubic-bezier(.2, .7, .2, 1);
+    --ease-spring: cubic-bezier(.34, 1.56, .64, 1); /* slight overshoot */
     --card-shadow: 0 1px 2px rgba(41, 48, 44, .06), 0 8px 24px -12px rgba(41, 48, 44, .25);
     --card-shadow-hover: 0 2px 4px rgba(41, 48, 44, .08), 0 22px 40px -18px rgba(41, 48, 44, .4);
 }
@@ -794,12 +795,39 @@ a.btn {
     border-radius: 2rem;
     background-color: var(--snow-100);
     color: var(--polar-400);
-    box-shadow: none;
-    transition: background-color .3s ease, box-shadow .3s var(--ease-out);
+    /* inset = fill that sweeps in on hover; second = drop shadow */
+    box-shadow: inset 0 0 0 0 var(--polar-100), 0 0 0 0 transparent;
+    transition: box-shadow .45s var(--ease-out), transform .45s var(--ease-spring), color .3s ease;
 }
 a.btn.dark-400 { background-color: var(--polar-400); color: var(--snow-100); }
-a.btn:hover { box-shadow: 0 10px 20px -12px rgba(41, 48, 44, .55); color: var(--snow-100); }
-a.btn.dark-400:hover { background-color: var(--polar-300); }
+
+a.btn .arrow {
+    display: inline-block;
+    transition: transform .45s var(--ease-spring), color .3s ease;
+}
+
+/* Hover (real pointers only) and keyboard focus: fill sweeps left to
+   right, button springs up, arrow slides and turns yellow */
+@media (hover: hover) {
+    a.btn:hover {
+        box-shadow: inset 20rem 0 0 0 var(--polar-100), 0 16px 26px -14px rgba(41, 48, 44, .7);
+        color: var(--snow-100);
+        transform: translateY(-3px);
+    }
+    a.btn:hover .arrow { transform: translateX(6px); color: var(--aurora-yellow); }
+}
+a.btn:focus-visible {
+    box-shadow: inset 20rem 0 0 0 var(--polar-100);
+    color: var(--snow-100);
+}
+a.btn:focus-visible .arrow { transform: translateX(6px); color: var(--aurora-yellow); }
+
+/* Press: settle down and shrink a touch */
+a.btn:active {
+    transform: translateY(0) scale(.97);
+    box-shadow: inset 20rem 0 0 0 var(--polar-100), 0 6px 12px -8px rgba(41, 48, 44, .6);
+    transition-duration: .12s;
+}
 
 /* ==========================================================
    One background per page (Nov 2026): every section sits on the
