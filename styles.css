@@ -458,6 +458,14 @@ a:hover {
     margin: 0;
 }
 
+.site-title a {
+    font: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+.site-title a:hover { color: var(--mountain-200); }
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -688,20 +696,17 @@ a:focus-visible, button:focus-visible {
     100% { box-shadow: 0 0 0 0 transparent; }
 }
 
-@supports (animation-timeline: view()) {
-    .reveal,
-    .project-card,
-    .making-card,
-    .decision,
-    .stat,
-    .reflection-grid > div,
-    .case-figure,
-    .figure-row figure,
-    .full-width-image {
-        animation: fade-up linear both;
-        animation-timeline: view();
-        animation-range: entry 0% entry 35%;
-    }
+/* Scroll reveal is driven by reveal.js (IntersectionObserver).
+   CSS view() timelines left content invisible in Safari after #hash jumps. */
+html .will-reveal {
+    opacity: 0;
+    translate: 0 18px;
+    transition: opacity .7s var(--ease-out), translate .7s var(--ease-out),
+                transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
+}
+html .will-reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
