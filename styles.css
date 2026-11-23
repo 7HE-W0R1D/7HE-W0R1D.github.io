@@ -437,9 +437,16 @@ a {
     transition: color .6s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-a:hover {
-    box-shadow: inset width 0 0 0 var(--mountain-200);
-    color: var(--snow-300);
+/* Fill on hover. Only on devices that really hover: phones keep :hover
+   stuck after a tap, which would leave the link highlighted. */
+@media (hover: hover) {
+    a:hover {
+        /* 100vw offset fills the link at any width; clone fills each wrapped line */
+        box-shadow: inset 100vw 0 0 0 var(--mountain-200);
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        color: var(--snow-300);
+    }
 }
 
 .navbar {
@@ -641,6 +648,7 @@ button.dark-400:hover {
 
 .pub-doi:hover {
     color: var(--polar-400);
+    box-shadow: none; /* uses the underline, not the global fill */
 }
 
 .pub-doi:hover::after {
@@ -677,6 +685,41 @@ button.dark-400:hover {
     .footer-right {
         flex: 1;
     }
+
+    /* Footer: less side padding so the email fits on a 320px screen */
+    .footer-section { padding: 2.5rem 1rem; }
+    .footer-left { min-width: 0; }
+}
+
+/* Long unbreakable strings (email, DOIs) wrap instead of scrolling sideways */
+a[href^="mailto:"],
+.pub-doi {
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================
+   Mobile readability + tap targets (checked against
+   static/extras/mobile.md, Nov 2026)
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    /* Body copy at 16px; secondary meta (dates, tags, captions) at 14px+ */
+    .note { font-size: 1rem; }
+    .pub-doi { font-size: .9rem; }
+
+    /* Standalone links: ~44px tall touch targets */
+    .nav-links a,
+    .social-links a,
+    .footer-links a,
+    .case-nav a {
+        display: inline-block;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* At least 8px between wrapped nav rows */
+    .nav-links { row-gap: .5rem; }
 }
 
 /* ==========================================================

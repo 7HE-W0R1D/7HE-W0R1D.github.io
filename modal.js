@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
     modal.innerHTML = `
-        <span class="modal-close" role="button" aria-label="Close">&times;</span>
+        <button type="button" class="modal-close" aria-label="Close image">&times;</button>
         <figure class="modal-figure">
             <img class="modal-content" id="modal-img" alt="">
             <figcaption class="modal-caption" id="modal-caption" aria-live="polite"></figcaption>
@@ -18,14 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalCaption = document.getElementById("modal-caption");
     const closeBtn = document.querySelector(".modal-close");
 
+    let lastFocus = null;
+
     // Add click event to all zoomable images
     document.querySelectorAll('.zoomable').forEach(img => {
         img.addEventListener('click', function() {
+            lastFocus = document.activeElement;
             modal.style.display = "block";
             modalImg.src = this.src;
             modalImg.alt = this.alt || '';
             modalCaption.textContent = this.alt || '';
             modalImg.style.cursor = 'zoom-out';
+            closeBtn.focus();
         });
     });
 
@@ -35,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImg.style.cursor = 'default';
         modalImg.alt = '';
         modalCaption.textContent = '';
+        if (lastFocus) lastFocus.focus();
     }
 
     closeBtn.onclick = closeModal;

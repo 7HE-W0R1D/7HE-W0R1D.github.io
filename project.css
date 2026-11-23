@@ -543,7 +543,24 @@ img.zoomable:hover {
 
 /* One background per page: undo the light-on-dark overrides */
 .section-dark-100 a, .section-dark-200 a, .section-dark-300 a, .section-dark-400 a { color: var(--mountain-200); }
-.section-dark-100 a:hover, .section-dark-200 a:hover, .section-dark-300 a:hover, .section-dark-400 a:hover { color: var(--snow-300); }
+/* Same fill as the global a:hover; without it the near-white text vanished */
+.section-dark-100 a:hover, .section-dark-200 a:hover, .section-dark-300 a:hover, .section-dark-400 a:hover {
+    color: var(--mountain-200);
+}
+@media (hover: hover) {
+    .section-dark-100 a:hover, .section-dark-200 a:hover, .section-dark-300 a:hover, .section-dark-400 a:hover {
+        box-shadow: inset 100vw 0 0 0 var(--mountain-200);
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        color: var(--snow-300);
+    }
+}
+
+/* Mobile readability: captions 14px+ */
+@media (max-width: 768px) {
+    .case-figure figcaption,
+    .figure-row figcaption { font-size: .9rem; }
+}
 .decision { border-left-color: var(--frost-deep); }
 .decision .label { color: var(--polar-300); }
 .decision h3::before { color: var(--mountain-200); }

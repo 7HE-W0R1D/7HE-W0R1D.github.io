@@ -690,3 +690,13 @@
 /* News sits right under the hero, with availability on top */
 #news .works-header { margin-bottom: 2rem; }
 #news .availability { margin: 0 0 2rem; }
+
+/* Mobile readability: body copy 16px, secondary meta 14px+ */
+@media screen and (max-width: 768px) {
+    .card-meta,
+    .making-card p { font-size: 1rem; }
+    .making-card .making-tag { font-size: .875rem; }
+    .availability,
+    .news-date,
+    .about-photos figcaption { font-size: .875rem; }
+}

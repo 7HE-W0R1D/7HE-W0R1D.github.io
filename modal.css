@@ -58,21 +58,40 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
+    z-index: 1;
     color: #fff;
     font-size: 2rem;
+    line-height: 1;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .modal-close:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: none;
+    box-shadow: none;
+}
+
+.modal-close:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+/* Keep the close button clear of notches / rounded corners */
+@media (max-width: 768px) {
+    .modal-close {
+        top: max(1rem, env(safe-area-inset-top));
+        right: max(1rem, env(safe-area-inset-right));
+    }
 }
 
 .zoomable {
