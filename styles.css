@@ -648,6 +648,26 @@ button.dark-400:hover {
 }
 
 /* Media query for mobile responsiveness */
+/* Small screens: name on its own line, links in one row below */
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        row-gap: .75rem;
+        padding: 1.5rem 1.25rem;
+    }
+    .site-title {
+        flex-basis: 100%;
+        white-space: nowrap;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: .25rem 1.25rem;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-links a { font-size: 1.1rem; }
+}
+
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
