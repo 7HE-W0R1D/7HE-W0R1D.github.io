@@ -25,7 +25,7 @@
 
     /* Red Mountain Brown colors */
     --mountain-100: #bb9878;
-    --mountain-200: #8c5f5a;
+    --mountain-200: #78524d; /* darkened from #8c5f5a: keeps AA over the ambient tint */
     --mountain-300: #8a4545;
 
     --off-black: #27302d;
@@ -841,4 +841,79 @@ a.btn:active {
 }
 body > section + section {
     border-top: 1px solid rgba(41, 48, 44, .1);
+}
+
+/* ==========================================================
+   Ambient background (ambient.js). Soft mint blobs drift slowly
+   and lean toward the mouse; a faint light trails the cursor.
+   Three greens (mint, sage, jade), tints peak at 25%; --mountain-200 was darkened so links stay
+   at 4.5:1+ over overlapping blobs. Captions use 90% opacity.
+   ========================================================== */
+.ambient {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+.ambient .blob {
+    position: absolute;
+    width: 70vmax;
+    height: 70vmax;
+    border-radius: 50%;
+    will-change: transform;
+    /* mouse lean: --mx/--my run -1..1, --depth sets how far each blob moves */
+    translate: calc(var(--mx, 0) * var(--depth)) calc(var(--my, 0) * var(--depth));
+}
+.ambient .blob-a {
+    --depth: 6vw;
+    top: -25vmax;
+    left: -15vmax;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--frost-sky) 25%, transparent), transparent);
+    animation: drift-a 38s ease-in-out infinite alternate;
+}
+.ambient .blob-b {
+    --depth: -8vw; /* opposite direction: gives a sense of depth */
+    top: 20vh;
+    right: -30vmax;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--frost-sage) 25%, transparent), transparent);
+    animation: drift-b 46s ease-in-out infinite alternate;
+}
+.ambient .blob-c {
+    --depth: 4vw;
+    bottom: -35vmax;
+    left: 10vw;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--frost-ocean) 25%, transparent), transparent);
+    animation: drift-c 54s ease-in-out infinite alternate;
+}
+@keyframes drift-a {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(12vw, 10vh) scale(1.12); }
+}
+@keyframes drift-b {
+    from { transform: translate(0, 0) scale(1.05); }
+    to   { transform: translate(-14vw, -8vh) scale(.95); }
+}
+@keyframes drift-c {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(18vw, -12vh) scale(1.1); }
+}
+
+/* Soft mint light that trails the cursor */
+.ambient .cursor-glow {
+    position: absolute;
+    top: -300px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--frost-sky) 16%, transparent), transparent);
+    opacity: 0;
+    transition: opacity .8s ease;
+    will-change: translate;
+}
+.ambient.is-tracking .cursor-glow { opacity: 1; }
+
+@media print {
+    .ambient { display: none; }
 }

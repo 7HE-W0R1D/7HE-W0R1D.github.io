@@ -298,7 +298,7 @@
     font-size: 0.85rem;
     line-height: 1.5;
     margin-top: 0.75rem;
-    opacity: 0.8;
+    opacity: 0.9; /* stays AA over the ambient background */
 }
 
 .case-figure.narrow {
@@ -406,7 +406,7 @@
     font-size: 0.8rem;
     font-style: normal;
     margin-top: 0.5rem;
-    opacity: 0.75;
+    opacity: 0.9;
 }
 
 /* Numbers that matter */

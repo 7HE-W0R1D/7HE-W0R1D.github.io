@@ -426,7 +426,7 @@
 .about-photos figcaption {
     font-size: 0.75rem;
     margin-top: 0.35rem;
-    opacity: 0.8;
+    opacity: 0.9; /* stays AA over the ambient background */
 }
 
 /* Contact block in footer */
