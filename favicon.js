@@ -89,10 +89,15 @@
   function colors() { return { disc: "#3a8467", cell: "#86c4bf", lamp: "#f2cd7e" }; }
   var cv = document.createElement("canvas"); cv.width = cv.height = SIZE;
   var ctx = cv.getContext("2d");
-  document.querySelectorAll("link[rel~='icon']").forEach(function (l) { l.remove(); });
-  var link = document.createElement("link");
-  link.rel = "icon"; link.type = "image/png"; document.head.appendChild(link);
-  function paint() { draw(ctx, SIZE, s, colors()); link.href = cv.toDataURL("image/png"); }
+  // Swap in a fresh <link> each frame instead of changing href: Safari ignores
+  // href changes on an existing icon link but may pick up a newly inserted one.
+  function paint() {
+    draw(ctx, SIZE, s, colors());
+    var link = document.createElement("link");
+    link.rel = "icon"; link.type = "image/png"; link.href = cv.toDataURL("image/png");
+    document.querySelectorAll("link[rel~='icon']").forEach(function (l) { l.remove(); });
+    document.head.appendChild(link);
+  }
   function tick() { step(s); s.at += MS; save(s); paint(); }
 
   save(s); paint();

@@ -377,7 +377,9 @@
     inset: 0;
     border-radius: inherit;
 }
-.making-card:hover a { box-shadow: inset 400px 0 0 0 var(--mountain-200); color: var(--snow-300); }
+@media (hover: hover) {
+    .making-card:hover a { background-size: 100% 100%, 100% var(--link-line); color: var(--link-ink); }
+}
 .making-card:focus-within { outline: 2px solid var(--frost-deep); outline-offset: 3px; }
 
 .making-card .making-tag {
@@ -490,16 +492,11 @@
     animation: pulse-dot 2.4s ease-out infinite;
 }
 
-/* Hashtags: small lift on hover */
+/* Hashtags: static labels, not links, so no hover response */
 .hashtag {
     border-radius: 999px;
     padding: .25rem .7rem;
-    transition: transform .25s var(--ease-out), background-color .25s ease, color .25s ease;
-}
-.hashtag:hover {
-    transform: translateY(-2px);
-    background-color: var(--polar-300);
-    color: var(--snow-300);
+    cursor: default;
 }
 
 /* Photo strip: gentle zoom */
@@ -576,7 +573,6 @@
     inset: 0;
     border-radius: inherit;
 }
-.making-card:hover a { box-shadow: inset 400px 0 0 0 var(--mountain-200); color: var(--snow-300); }
 .making-card:focus-within { outline: 2px solid var(--frost-deep); outline-offset: 3px; }
 
 .making-card .making-tag {

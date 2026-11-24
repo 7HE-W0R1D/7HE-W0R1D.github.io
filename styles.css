@@ -426,27 +426,59 @@ p {
     font-weight: 700;
 }
 
+/* Links: a hairline underline at rest. On hover the line rises into a soft
+   rounded fill and the text turns light.
+   - Animating background-size (not a box-shadow offset) takes the same time
+     for a 3-letter link and a full sentence.
+   - Two layers: the fill spans the padding; the underline sits under the text
+     only (content-box), so it doesn't overhang the word.
+   - box-decoration-break: clone gives each wrapped line its own fill + corners.
+   Variables: --link (colour), --link-ink (text on fill), --link-line (underline
+   thickness at rest; 0 hides it, e.g. in the nav). */
 a {
+    --link: var(--mountain-200);
+    --link-ink: var(--snow-300);
+    --link-line: 1px;
     font-family: 'Forum', serif;
     font-size: 1.25rem;     /* 20px */
-    color: var(--mountain-200);
+    color: var(--link);
     text-decoration: none;
-    box-shadow: inset 0 0 0 0 var(--mountain-200);
     margin: 0 -.25rem;
     padding: 0 .25rem;
-    transition: color .6s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 3px;
+    background-image:
+        linear-gradient(var(--link), var(--link)),
+        linear-gradient(color-mix(in srgb, var(--link) 40%, transparent),
+                        color-mix(in srgb, var(--link) 40%, transparent));
+    background-repeat: no-repeat;
+    background-origin: padding-box, content-box;
+    background-position: 0 100%, 0 100%;
+    background-size: 100% 0, 100% var(--link-line);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    /* leaving: text stays light until the fill has dropped below it */
+    transition: background-size .4s var(--ease-out), color .2s ease .12s;
 }
 
 /* Fill on hover. Only on devices that really hover: phones keep :hover
    stuck after a tap, which would leave the link highlighted. */
 @media (hover: hover) {
     a:hover {
-        /* 100vw offset fills the link at any width; clone fills each wrapped line */
-        box-shadow: inset 100vw 0 0 0 var(--mountain-200);
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        color: var(--snow-300);
+        background-size: 100% 100%, 100% var(--link-line);
+        color: var(--link-ink);
+        transition: background-size .4s var(--ease-out), color .2s ease;
     }
+}
+/* Keyboard focus shows the same fill (plus the focus ring below) */
+a:focus-visible {
+    background-size: 100% 100%, 100% var(--link-line);
+    color: var(--link-ink);
+}
+/* Tap / press: quick fill so touch users get feedback too */
+a:active {
+    background-size: 100% 100%, 100% var(--link-line);
+    color: var(--link-ink);
+    transition-duration: .1s;
 }
 
 .navbar {
@@ -472,7 +504,7 @@ a {
     color: inherit;
     margin: 0;
     padding: 0;
-    box-shadow: none;
+    background: none;
     transition: none;
 }
 
@@ -482,21 +514,10 @@ a {
     list-style: none;
 }
 
+/* Nav: same fill as other links, but no resting underline */
 .nav-links a {
-    font-family: 'Forum', serif;
-    font-size: 1.25rem;      /* 24px */
-    color: var(--mountain-200);
-    text-decoration: none;
-    box-shadow: inset 0 0 0 0 var(--mountain-200);
-    margin: 0 -.25rem;
+    --link-line: 0px;
     padding: 0 .5rem;
-    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-    border-radius: 2px;
-}
-
-.nav-links a:hover {
-    box-shadow: inset 400px 0 0 0 var(--mountain-200);
-    color: var(--snow-300);
 }
 
 section {
@@ -623,36 +644,12 @@ button.dark-400:hover {
     color: var(--polar-200);
 }
 
-/* DOI link for publications: with underline animation on hover */
+/* DOI link for publications: smaller, body font; same fill effect as all links */
 .pub-doi {
     font-family: inherit;
     font-size: .85rem;
-    color: var(--mountain-200);
-    text-decoration: none;
-    margin-left: 0.08rem;
-    position: relative;
+    margin: 0 -.12rem 0 .08rem;
     padding: 0 .12rem;
-    transition: color .22s ease;
-}
-
-.pub-doi::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    width: 0;
-    background: var(--mountain-200);
-    transition: width .22s ease;
-}
-
-.pub-doi:hover {
-    color: var(--polar-400);
-    box-shadow: none; /* uses the underline, not the global fill */
-}
-
-.pub-doi:hover::after {
-    width: 100%;
 }
 
 /* Media query for mobile responsiveness */
@@ -794,6 +791,7 @@ a.btn {
     padding: 1rem 2rem;
     border-radius: 2rem;
     background-color: var(--snow-100);
+    background-image: none;    /* has its own sweep, not the link underline/fill */
     color: var(--polar-400);
     /* inset = fill that sweeps in on hover; second = drop shadow */
     box-shadow: inset 0 0 0 0 var(--polar-100), 0 0 0 0 transparent;
