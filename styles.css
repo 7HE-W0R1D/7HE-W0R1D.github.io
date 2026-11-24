@@ -729,7 +729,7 @@ a[href^="mailto:"],
     --card-shadow-hover: 0 2px 4px rgba(41, 48, 44, .08), 0 22px 40px -18px rgba(41, 48, 44, .4);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background-color: var(--snow-100); }
 
 ::selection { background: var(--aurora-yellow); color: var(--polar-100); }
 
@@ -911,6 +911,15 @@ body > section + section {
     will-change: translate;
 }
 .ambient.is-tracking .cursor-glow { opacity: 1; }
+
+/* Touch screens (no cursor to follow): let the layer scroll with the page.
+   iOS 26 Safari paints a solid band behind its glass bars when a fixed
+   layer touches the screen edges; with nothing fixed there, the page shows
+   through the bars like on other sites. */
+@media (hover: none) {
+    body { position: relative; }
+    .ambient { position: absolute; }
+}
 
 @media print {
     .ambient { display: none; }
