@@ -348,11 +348,10 @@
     border-radius: 12px;
     margin-bottom: 1rem;
 }
-/* Images show whole at their own shape, like the featured covers */
+/* Same 4:3 frame for every card; images fill it and crop to fit. */
 .making-card img {
     height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .making-placeholder {
@@ -675,7 +674,14 @@
 
 /* News sits right under the hero, with availability on top */
 #news .works-header { margin-bottom: 2rem; }
-#news .availability { margin: 0 0 2rem; }
+#news .availability {
+    margin: 0 0 2rem;
+    font-size: .95rem;
+    border-radius: 10px;
+    background: var(--polar-200);
+    color: var(--snow-100);
+}
+#news .availability strong { font-weight: 600; }
 
 /* Mobile readability: body copy 16px, secondary meta 14px+ */
 @media screen and (max-width: 768px) {
